@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'STITCH_VERSION', '1.0.1' );
+define( 'STITCH_VERSION', '1.0.2' );
 
 /**
  * Theme Setup
@@ -2246,5 +2246,33 @@ function stitch_restrict_unfiltered_uploads( $caps, $cap, $user_id, $args ) {
 	return $caps;
 }
 add_filter( 'map_meta_cap', 'stitch_restrict_unfiltered_uploads', 10, 4 );
+
+/**
+ * 6. Swiss Architectural Pagination Template Filter
+ * Completely suppresses unstyled screen-reader headings and ensures all pagination renders as an elevated tactile pill bar.
+ */
+function stitch_custom_navigation_markup_template( $template, $class ) {
+	return '
+	<nav class="navigation %1$s my-10 flex flex-col items-center justify-center w-full" aria-label="%4$s">
+		<h2 class="sr-only screen-reader-text">%2$s</h2>
+		<div class="nav-links inline-flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-full bg-surface-container-low/80 border border-outline-variant/40 shadow-xs backdrop-blur-xs font-mono text-[13px]">%3$s</div>
+	</nav>';
+}
+add_filter( 'navigation_markup_template', 'stitch_custom_navigation_markup_template', 10, 2 );
+
+/**
+ * 7. Default Pagination Arguments Filter
+ * Enforces refined tactile icons and clean monospace typography across all archive queries.
+ */
+function stitch_custom_pagination_args( $args ) {
+	$args['screen_reader_text'] = __( 'Articles navigation', 'rashed' );
+	$args['aria_label']         = __( 'Articles navigation', 'rashed' );
+	$args['prev_text']          = '<span class="inline-flex items-center gap-1"><span class="material-symbols-outlined text-[15px]">arrow_back</span><span>Newer</span></span>';
+	$args['next_text']          = '<span class="inline-flex items-center gap-1"><span>Older</span><span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>';
+	$args['class']              = 'pagination';
+	return $args;
+}
+add_filter( 'the_posts_pagination_args', 'stitch_custom_pagination_args' );
+
 
 

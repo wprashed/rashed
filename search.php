@@ -122,14 +122,14 @@ $articles_url  = $page_writing ? get_permalink( $page_writing ) : home_url( '/wr
 				<?php endif; ?>
 			</div>
 
-			<div class="pt-8 mt-6 border-t border-surface-container-high/60 w-full">
+			<div class="pt-10 mt-10 border-t border-surface-container-high/60 w-full flex justify-center">
 				<?php
 				the_posts_pagination(
 					array(
 						'mid_size'           => 2,
-						'prev_text'          => '<span class="material-symbols-outlined text-[15px]">arrow_back</span> Previous',
-						'next_text'          => 'Next <span class="material-symbols-outlined text-[15px]">arrow_forward</span>',
-						'screen_reader_text' => __( 'Search results pagination', 'stitch-animated' ),
+						'prev_text'          => '<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">arrow_back</span><span>Previous</span></span>',
+						'next_text'          => '<span class="inline-flex items-center gap-1.5"><span>Next</span><span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>',
+						'screen_reader_text' => __( 'Search results pagination', 'rashed' ),
 					)
 				);
 				?>

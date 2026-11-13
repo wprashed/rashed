@@ -338,14 +338,14 @@ $categories  = get_categories( array( 'hide_empty' => true ) );
 				</div>
 
 				<!-- Pagination -->
-				<div class="pt-8 mt-6 border-t border-surface-container-high/60 w-full">
+				<div class="pt-10 mt-10 border-t border-surface-container-high/60 w-full flex justify-center">
 					<?php
 					the_posts_pagination(
 						array(
 							'mid_size'           => 2,
-							'prev_text'          => '<span class="material-symbols-outlined text-[15px]">arrow_back</span> Newer',
-							'next_text'          => 'Older <span class="material-symbols-outlined text-[15px]">arrow_forward</span>',
-							'screen_reader_text' => __( 'Articles navigation', 'stitch-animated' ),
+							'prev_text'          => '<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px]">arrow_back</span><span>Newer</span></span>',
+							'next_text'          => '<span class="inline-flex items-center gap-1.5"><span>Older</span><span class="material-symbols-outlined text-[15px]">arrow_forward</span></span>',
+							'screen_reader_text' => __( 'Articles navigation', 'rashed' ),
 						)
 					);
 					?>

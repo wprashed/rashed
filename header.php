@@ -62,11 +62,11 @@ $is_contact = is_page( 'contact' );
 <?php wp_body_open(); ?>
 
 <!-- Main Outer Architectural Editorial Container -->
-<div class="max-w-[1120px] mx-auto bg-surface-container-lowest border border-outline-variant/60 rounded-[24px] shadow-shell relative overflow-hidden flex flex-col min-h-[calc(100vh-5rem)] z-10">
+<div class="max-w-[1240px] mx-auto bg-surface-container-lowest border border-outline-variant/50 rounded-[28px] shadow-shell relative overflow-hidden flex flex-col min-h-[calc(100vh-5rem)] z-10 transition-all duration-300">
 	
-	<!-- Architectural Grid Guidelines (Tectonic Vertical Accents) -->
-	<div class="absolute inset-y-0 left-1/3 w-[1px] bg-surface-container-high pointer-events-none hidden lg:block z-0"></div>
-	<div class="absolute inset-y-0 left-2/3 w-[1px] bg-surface-container-high pointer-events-none hidden lg:block z-0"></div>
+	<!-- Architectural Grid Guidelines (Tectonic Vertical Accents - Subtle & Airy) -->
+	<div class="absolute inset-y-0 left-1/3 w-[1px] bg-surface-container-high/30 pointer-events-none hidden lg:block z-0"></div>
+	<div class="absolute inset-y-0 left-2/3 w-[1px] bg-surface-container-high/30 pointer-events-none hidden lg:block z-0"></div>
 
 	<!-- Masthead Header Navigation -->
 	<header class="relative z-20 border-b border-outline-variant/50 bg-surface-container-lowest/90 backdrop-blur-md px-6 md:px-10">
