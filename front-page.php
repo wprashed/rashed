@@ -64,13 +64,17 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 			<div class="pointer-events-none absolute -top-32 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-primary/10 via-indigo-500/5 to-transparent rounded-full blur-3xl opacity-70"></div>
 			<div class="pointer-events-none absolute top-1/2 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl opacity-50"></div>
 
-			<!-- Architectural Watermark (Coordinates) -->
-			<div class="pointer-events-none absolute top-6 right-8 lg:right-12 font-mono text-[10px] text-outline-variant/40 tracking-widest hidden md:flex items-center gap-3 select-none">
-				<span>DHAKA // 23.8103°N 90.4125°E</span>
-				<span class="text-outline-variant/30">&bull;</span>
-				<span class="live-dhaka-clock" data-clock-mode="short">UTC+6</span>
-				<span class="text-outline-variant/30">&bull;</span>
-				<span>CORE: 6.9 &bull; 7.0 &bull; 7.1</span>
+			<!-- Architectural Telemetry Badge (Coordinates & Live Clock) -->
+			<div class="absolute top-5 right-6 sm:right-8 lg:right-12 hidden md:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container/70 dark:bg-white/[0.08] backdrop-blur-md border border-outline-variant/60 dark:border-white/15 text-on-surface-variant font-mono text-[11px] shadow-xs select-none">
+				<span class="flex h-1.5 w-1.5 relative shrink-0">
+					<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+					<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+				</span>
+				<span class="font-medium text-on-surface">DHAKA // 23.8103°N 90.4125°E</span>
+				<span class="text-outline-variant">&bull;</span>
+				<span class="live-dhaka-clock text-emerald-600 dark:text-emerald-400 font-semibold" data-clock-mode="short">UTC+6</span>
+				<span class="text-outline-variant">&bull;</span>
+				<span class="text-on-surface-variant font-medium">CORE: 6.9 &bull; 7.0 &bull; 7.1</span>
 			</div>
 
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto relative z-10">
