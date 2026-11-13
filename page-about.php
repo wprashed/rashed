@@ -574,10 +574,11 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 			</div>
 		</section>
 
-		<!-- SECTION 4: CURATED PHOTOGRAPHY (DEEP MIDNIGHT CINEMATIC FRAME) -->
+		<!-- SECTION 4: CURATED PHOTOGRAPHY (CINEMATIC BENTO EXHIBITION) -->
 		<section class="relative px-6 md:px-12 py-18 bg-[#090d16] text-white border-y border-white/10 overflow-hidden">
 			<!-- Radial Ambience -->
 			<div class="pointer-events-none absolute top-0 left-1/3 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl opacity-40"></div>
+			<div class="pointer-events-none absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl opacity-30"></div>
 
 			<div class="relative z-10 max-w-5xl mx-auto flex flex-col gap-10">
 				
@@ -604,30 +605,43 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 					</div>
 				</div>
 
-				<!-- 8 Curated Photo Cards Grid with Film Metadata Cards -->
+				<!-- Asymmetric Curated Gallery Arrangement -->
 				<?php
-				$curated_gallery = array(
+				$photo_hero = array(
+					'id'       => '36308816',
+					'file'     => 'pexels-36308816-annapurna-mountain',
+					'title'    => 'Annapurna Himalayas Peak',
+					'category' => 'EXPEDITIONS',
+					'tag'      => 'Himalayas, Nepal',
+					'caption'  => 'Snow-capped Himalayan ridge and morning alpine light across the 8,091m massif.',
+					'url'      => 'https://www.pexels.com/photo/36308816/',
+					'width'    => 1200,
+					'height'   => 900,
+				);
+
+				$photo_portrait = array(
+					'id'       => '35358099',
+					'file'     => 'pexels-35358099-river-walk-bw',
+					'title'    => 'Evening Walk Along River Path',
+					'category' => 'MONOCHROME',
+					'tag'      => 'Reportage',
+					'caption'  => 'High-contrast monochrome human stillness and evening river path reflections.',
+					'url'      => 'https://www.pexels.com/photo/black-and-white-evening-walk-along-river-path-35358099/',
+					'width'    => 1200,
+					'height'   => 1800,
+				);
+
+				$grid_photos = array(
 					array(
 						'id'       => '36236714',
 						'file'     => 'pexels-36236714-phewa-lake-kayak',
 						'title'    => 'Sunset Kayaking on Phewa Lake',
 						'category' => 'WATERSCAPES',
 						'tag'      => 'Pokhara, Nepal',
-						'caption'  => 'Golden hour reflections on tranquil waters.',
+						'caption'  => 'Golden hour reflections on tranquil waters with solitary kayakers.',
 						'url'      => 'https://www.pexels.com/photo/sunset-kayaking-on-phewa-lake-in-pokhara-36236714/',
 						'width'    => 1200,
 						'height'   => 800,
-					),
-					array(
-						'id'       => '36308816',
-						'file'     => 'pexels-36308816-annapurna-mountain',
-						'title'    => 'Annapurna Himalayas Peak',
-						'category' => 'EXPEDITIONS',
-						'tag'      => 'Himalayas',
-						'caption'  => 'Snow-capped Himalayan ridge and morning light.',
-						'url'      => 'https://www.pexels.com/photo/36308816/',
-						'width'    => 1200,
-						'height'   => 900,
 					),
 					array(
 						'id'       => '39003449',
@@ -635,21 +649,10 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 						'title'    => 'Commercial Aircraft at Sunset',
 						'category' => 'AVIATION',
 						'tag'      => 'Twilight Horizon',
-						'caption'  => 'High-altitude silhouette against sunset gradients.',
+						'caption'  => 'High-altitude silhouette against burning sunset gradient horizons.',
 						'url'      => 'https://www.pexels.com/photo/commercial-airplane-flying-at-sunset-with-orange-sky-39003449/',
 						'width'    => 1200,
 						'height'   => 900,
-					),
-					array(
-						'id'       => '35358099',
-						'file'     => 'pexels-35358099-river-walk-bw',
-						'title'    => 'Evening Walk Along River Path',
-						'category' => 'MONOCHROME',
-						'tag'      => 'Reportage',
-						'caption'  => 'High-contrast monochrome human stillness.',
-						'url'      => 'https://www.pexels.com/photo/black-and-white-evening-walk-along-river-path-35358099/',
-						'width'    => 1200,
-						'height'   => 1800,
 					),
 					array(
 						'id'       => '36308832',
@@ -657,7 +660,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 						'title'    => 'Himalayan Ridge &amp; Cloud Sea',
 						'category' => 'ALPINE',
 						'tag'      => 'Topography',
-						'caption'  => 'Dramatic cloud inversions and mountain ridges.',
+						'caption'  => 'Dramatic cloud inversions rolling over layered Himalayan ridgelines.',
 						'url'      => 'https://www.pexels.com/photo/36308832/',
 						'width'    => 1200,
 						'height'   => 900,
@@ -668,7 +671,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 						'title'    => 'Serene Waterways &amp; Reflection',
 						'category' => 'WATERSCAPES',
 						'tag'      => 'Tranquility',
-						'caption'  => 'Lush greenery mirroring stillness on calm waters.',
+						'caption'  => 'Lush greenery mirroring glassy stillness across calm river delta waters.',
 						'url'      => 'https://www.pexels.com/photo/32791929/',
 						'width'    => 1200,
 						'height'   => 904,
@@ -679,7 +682,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 						'title'    => 'Minimal Geometric Shadow',
 						'category' => 'MINIMALISM',
 						'tag'      => 'Light Study',
-						'caption'  => 'Interplay of architectural light and negative space.',
+						'caption'  => 'Interplay of architectural light, angles, and graphic negative space.',
 						'url'      => 'https://www.pexels.com/photo/32760703/',
 						'width'    => 1200,
 						'height'   => 904,
@@ -690,7 +693,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 						'title'    => 'Architectural Lines &amp; Spatial Form',
 						'category' => 'ARCHITECTURE',
 						'tag'      => 'Geometry',
-						'caption'  => 'Linear symmetry, rhythm, and structural engineering.',
+						'caption'  => 'Linear symmetry, rhythm, and structural engineering in built environments.',
 						'url'      => 'https://www.pexels.com/photo/32760701/',
 						'width'    => 1200,
 						'height'   => 1594,
@@ -698,31 +701,120 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 				);
 				?>
 
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-					<?php foreach ( $curated_gallery as $photo ) : ?>
-						<a href="<?php echo esc_url( $photo['url'] ); ?>" target="_blank" rel="noopener noreferrer" class="group flex flex-col gap-3 bg-white/[0.04] p-3 rounded-2xl border border-white/10 hover:border-white/30 transition-all shadow-lg hover:-translate-y-1">
-							<div class="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900">
-								<picture>
-									<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo['file'] . '.webp' ); ?>" type="image/webp">
-									<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo['file'] . '.jpg' ); ?>" alt="<?php echo esc_attr( $photo['title'] ); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="<?php echo esc_attr( $photo['width'] ); ?>" height="<?php echo esc_attr( $photo['height'] ); ?>" loading="lazy" decoding="async">
-								</picture>
-								<div class="absolute top-2 left-2 px-2 py-0.5 bg-black/60 backdrop-blur-md rounded-full text-white/90 font-label-code text-[9px] uppercase font-medium border border-white/10">
-									<?php echo esc_html( $photo['category'] ); ?>
+				<!-- Dynamic Asymmetric Bento Showcase (Hero Panorama + Portrait) -->
+				<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+					
+					<!-- 1. Hero Panorama Frame (8 cols on desktop): Annapurna Mountain Peak -->
+					<a href="<?php echo esc_url( $photo_hero['url'] ); ?>" target="_blank" rel="noopener noreferrer" class="interactive-spotlight interactive-spotlight-indigo md:col-span-8 group relative bg-white/[0.04] p-3.5 sm:p-4 rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden" data-tilt data-tilt-max="2">
+						<div class="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden rounded-2xl bg-slate-900 shadow-inner">
+							<picture>
+								<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo_hero['file'] . '.webp' ); ?>" type="image/webp">
+								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo_hero['file'] . '.jpg' ); ?>" alt="<?php echo esc_attr( $photo_hero['title'] ); ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" width="1200" height="900" loading="lazy" decoding="async">
+							</picture>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+							
+							<!-- Top Metadata Badges -->
+							<div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2">
+								<span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-white font-mono text-[10.5px] uppercase font-semibold border border-white/15 flex items-center gap-1.5 shadow-sm">
+									<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+									<span><?php echo esc_html( $photo_hero['category'] ); ?></span>
+								</span>
+								<span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-white/90 font-mono text-[10.5px] border border-white/15 flex items-center gap-1.5 shadow-sm">
+									<span class="material-symbols-outlined text-[13px] text-emerald-400">landscape</span>
+									<span>8,091m Peak // Himalayas</span>
+								</span>
+							</div>
+
+							<!-- Bottom Title & Telemetry Overlay -->
+							<div class="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 sm:p-4 rounded-xl bg-black/75 backdrop-blur-md border border-white/15 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
+								<div>
+									<h3 class="font-display text-lg sm:text-xl md:text-2xl text-white font-medium group-hover:text-primary-container transition-colors">
+										<?php echo esc_html( $photo_hero['title'] ); ?>
+									</h3>
+									<p class="font-body text-[13px] text-white/75 mt-0.5">
+										<?php echo esc_html( $photo_hero['caption'] ); ?>
+									</p>
 								</div>
-								<div class="absolute bottom-2 right-2 px-2 py-0.5 bg-black/70 backdrop-blur-md rounded-full text-white/80 font-label-code text-[9px]">
-									<?php echo esc_html( $photo['tag'] ); ?>
+								<span class="shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/15 hover:bg-white/25 text-white font-mono text-[11px] font-semibold transition-colors">
+									<span>Inspect Shot</span>
+									<span class="material-symbols-outlined text-[14px]">north_east</span>
+								</span>
+							</div>
+						</div>
+					</a>
+
+					<!-- 2. Hero Portrait Frame (4 cols on desktop): Evening Walk River Path -->
+					<a href="<?php echo esc_url( $photo_portrait['url'] ); ?>" target="_blank" rel="noopener noreferrer" class="interactive-spotlight md:col-span-4 group relative bg-white/[0.04] p-3.5 sm:p-4 rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden" data-tilt data-tilt-max="2.5">
+						<div class="relative aspect-[4/5] sm:aspect-auto sm:h-full min-h-[320px] w-full overflow-hidden rounded-2xl bg-slate-900 shadow-inner flex flex-col justify-between">
+							<picture>
+								<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo_portrait['file'] . '.webp' ); ?>" type="image/webp">
+								<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo_portrait['file'] . '.jpg' ); ?>" alt="<?php echo esc_attr( $photo_portrait['title'] ); ?>" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" width="1200" height="1800" loading="lazy" decoding="async">
+							</picture>
+							<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/40"></div>
+							
+							<div class="relative z-10 p-3.5 flex items-center justify-between">
+								<span class="px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-white font-mono text-[10.5px] uppercase font-semibold border border-white/15">
+									<?php echo esc_html( $photo_portrait['category'] ); ?>
+								</span>
+								<span class="px-2.5 py-1 bg-black/60 backdrop-blur-md rounded-full text-white/80 font-mono text-[10.5px] border border-white/15">
+									Reportage
+								</span>
+							</div>
+
+							<div class="relative z-10 p-4">
+								<h3 class="font-display text-lg text-white font-medium group-hover:text-primary-container transition-colors mb-1">
+									<?php echo esc_html( $photo_portrait['title'] ); ?>
+								</h3>
+								<p class="font-body text-[12.5px] text-white/70 leading-relaxed mb-3">
+									<?php echo esc_html( $photo_portrait['caption'] ); ?>
+								</p>
+								<div class="flex items-center justify-between pt-2.5 border-t border-white/15 font-mono text-[11px] text-white/60">
+									<span>Pexels Verified</span>
+									<span class="text-white group-hover:text-primary-container flex items-center gap-1 font-semibold">
+										<span>Inspect ↗</span>
+									</span>
 								</div>
 							</div>
-							<div class="px-1 flex flex-col gap-0.5">
-								<div class="flex items-center justify-between">
-									<h3 class="font-display text-[15px] text-white font-normal group-hover:text-primary-container transition-colors line-clamp-1">
-										<?php echo esc_html( $photo['title'] ); ?>
-									</h3>
-									<span class="material-symbols-outlined text-[14px] text-white/40 group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0">north_east</span>
+						</div>
+					</a>
+
+				</div>
+
+				<!-- 6 Curated Fine-Art Exhibition Cards (Clean 3-Column Grid) -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+					<?php foreach ( $grid_photos as $photo ) : ?>
+						<a href="<?php echo esc_url( $photo['url'] ); ?>" target="_blank" rel="noopener noreferrer" class="interactive-spotlight group flex flex-col justify-between bg-white/[0.04] p-4 rounded-2xl border border-white/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 shadow-lg">
+							<div>
+								<div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-slate-900 mb-3.5 shadow-inner">
+									<picture>
+										<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo['file'] . '.webp' ); ?>" type="image/webp">
+										<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/' . $photo['file'] . '.jpg' ); ?>" alt="<?php echo esc_attr( $photo['title'] ); ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" width="<?php echo esc_attr( $photo['width'] ); ?>" height="<?php echo esc_attr( $photo['height'] ); ?>" loading="lazy" decoding="async">
+									</picture>
+									<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+									<div class="absolute top-2.5 left-2.5 px-2.5 py-0.5 bg-black/65 backdrop-blur-md rounded-full text-white font-mono text-[9.5px] uppercase font-semibold border border-white/15">
+										<?php echo esc_html( $photo['category'] ); ?>
+									</div>
+									<div class="absolute bottom-2.5 right-2.5 px-2.5 py-0.5 bg-black/75 backdrop-blur-md rounded-full text-white/90 font-mono text-[9.5px] border border-white/15">
+										<?php echo esc_html( $photo['tag'] ); ?>
+									</div>
 								</div>
-								<p class="font-body-sm text-[12px] text-white/60 line-clamp-1">
-									<?php echo esc_html( $photo['caption'] ); ?>
-								</p>
+								
+								<div class="flex flex-col gap-1 px-1">
+									<div class="flex items-start justify-between gap-2">
+										<h3 class="font-display text-[16px] text-white font-medium group-hover:text-primary-container transition-colors leading-snug">
+											<?php echo esc_html( $photo['title'] ); ?>
+										</h3>
+										<span class="material-symbols-outlined text-[15px] text-white/40 group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0 pt-0.5">north_east</span>
+									</div>
+									<p class="font-body text-[12.5px] text-white/65 leading-relaxed">
+										<?php echo esc_html( $photo['caption'] ); ?>
+									</p>
+								</div>
+							</div>
+
+							<div class="pt-3 mt-3 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-white/50 px-1">
+								<span>Pexels CC0</span>
+								<span class="text-white/80 group-hover:text-white font-medium">Inspect Shot ↗</span>
 							</div>
 						</a>
 					<?php endforeach; ?>
@@ -739,7 +831,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 							<p class="font-body-sm text-[13px] text-white/70">Full-resolution gallery, curated editorial collections, and CC0 open creative commons.</p>
 						</div>
 					</div>
-					<a href="<?php echo esc_url( $pexels_url ); ?>" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-slate-900 hover:bg-white/90 transition-all font-body-sm text-[13.5px] font-semibold shadow-md group">
+					<a href="<?php echo esc_url( $pexels_url ); ?>" target="_blank" rel="noopener noreferrer" class="btn-magnetic shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-slate-900 hover:bg-white/90 transition-all font-body-sm text-[13.5px] font-semibold shadow-md group">
 						<span>View Pexels Profile</span>
 						<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
 					</a>
@@ -805,33 +897,90 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 			</div>
 		</section>
 
-		<!-- SECTION 5: CALL TO ACTION (MIDNIGHT AURORA DISPATCH PLATE) -->
-		<section class="relative px-6 md:px-12 py-18 bg-[#090d16] text-white overflow-hidden">
-			<!-- Radial Glow -->
-			<div class="pointer-events-none absolute -top-40 right-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl opacity-35"></div>
+		<!-- SECTION 5: CALL TO ACTION (MIDNIGHT AURORA DISPATCH CONSOLE) -->
+		<section class="relative px-6 md:px-12 py-20 md:py-28 bg-[#070b14] text-white overflow-hidden border-t border-white/10">
+			<!-- Multi-Spectral Ambient Atmosphere -->
+			<div class="pointer-events-none absolute -top-40 right-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl opacity-40"></div>
+			<div class="pointer-events-none absolute -bottom-40 left-1/4 w-[500px] h-[500px] bg-emerald-500/15 rounded-full blur-3xl opacity-30"></div>
 
-			<div class="relative z-10 max-w-5xl mx-auto bg-white/[0.04] p-8 sm:p-12 md:p-14 rounded-3xl border border-white/10 shadow-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-				<div class="max-w-xl">
-					<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white font-label-code text-[11px] uppercase tracking-wider border border-white/15 mb-3 font-medium">
-						<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-						<span>Get in Touch</span>
+			<!-- Technical Grid Lines Overlay -->
+			<div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+
+			<div class="relative z-10 max-w-5xl mx-auto">
+				
+				<div class="interactive-spotlight interactive-spotlight-indigo relative bg-gradient-to-br from-[#0c1424] via-[#090e1a] to-[#04060d] text-white p-8 sm:p-12 md:p-14 lg:p-16 rounded-3xl border border-indigo-500/30 shadow-2xl overflow-hidden group" data-tilt data-tilt-max="2">
+					
+					<!-- Corner Crosshairs -->
+					<span class="absolute top-3 left-3 text-white/30 font-mono text-[11px] select-none pointer-events-none">+</span>
+					<span class="absolute top-3 right-3 text-white/30 font-mono text-[11px] select-none pointer-events-none">+</span>
+					<span class="absolute bottom-3 left-3 text-white/30 font-mono text-[11px] select-none pointer-events-none">+</span>
+					<span class="absolute bottom-3 right-3 text-white/30 font-mono text-[11px] select-none pointer-events-none">+</span>
+
+					<div class="relative z-10 flex flex-col gap-8">
+						
+						<!-- Header Telemetry Bar -->
+						<div class="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-white/10">
+							<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-emerald-500/15 text-emerald-300 font-mono text-[11px] font-semibold border border-emerald-500/30">
+								<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+								<span>Open for Core Architecture &amp; Advisory</span>
+							</div>
+							<div class="font-mono text-[11px] text-white/60 flex items-center gap-2">
+								<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+								<span>SLA &lt; 24h &bull; Asia/Dhaka (UTC+6)</span>
+							</div>
+						</div>
+
+						<!-- Core Pitch & Headline -->
+						<div class="max-w-2xl">
+							<h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-white font-normal mb-3.5 leading-snug tracking-tight">
+								Have a mission-critical project or want to collaborate on open source?
+							</h3>
+							<p class="font-body text-[14.5px] text-white/75 leading-relaxed font-light">
+								I am always open to discussing WordPress Core architecture, high-concurrency enterprise engineering, LMS platform ecosystems, and WordCamp keynote presentations. Form data dispatches securely to my inbox and site ledger.
+							</p>
+						</div>
+
+						<!-- High-Impact Action Suite -->
+						<div class="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5">
+							<a href="<?php echo esc_url( $contact_url ); ?>" class="btn-magnetic inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-white text-slate-900 rounded-full hover:bg-emerald-400 hover:text-slate-900 font-mono text-[13px] font-bold shadow-lg transition-all group">
+								<span>Start a Conversation</span>
+								<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+							</a>
+
+							<button type="button" data-copy-email="<?php echo esc_attr( get_theme_mod( 'stitch_contact_email', 'wprashed@icloud.com' ) ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-mono text-[12px] border border-white/15 transition-all cursor-pointer backdrop-blur-md group" title="Copy Email">
+								<span class="material-symbols-outlined text-[15px] group-hover:text-emerald-400 transition-colors">content_copy</span>
+								<span>Copy wprashed@icloud.com</span>
+							</button>
+
+							<a href="<?php echo esc_url( $contrib_url ); ?>" class="btn-magnetic inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/5 hover:bg-white/10 text-white/80 hover:text-white rounded-full font-mono text-[12px] border border-white/10 transition-all">
+								<span>View Contributions</span>
+								<span class="material-symbols-outlined text-[14px]">north_east</span>
+							</a>
+						</div>
+
+						<!-- Verified Ecosystem Channels Footer -->
+						<div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] text-white/50">
+							<div class="flex flex-wrap items-center gap-4">
+								<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+									<span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+									<span>profiles.wordpress.org/wprashed</span>
+								</a>
+								<span class="text-white/20">&bull;</span>
+								<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1.5">
+									<span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+									<span>github.com/wprashed</span>
+								</a>
+							</div>
+							<div class="flex items-center gap-1.5 text-emerald-400 font-medium">
+								<span class="material-symbols-outlined text-[15px]">verified</span>
+								<span>Encrypted Dispatch Ledger</span>
+							</div>
+						</div>
+
 					</div>
-					<h3 class="font-display text-2xl sm:text-3xl md:text-4xl text-white font-normal mb-3 leading-tight">
-						Have a project in mind or want to collaborate on open source?
-					</h3>
-					<p class="font-body-sm text-[14px] text-white/70 leading-relaxed font-light">
-						I am always open to discussing WordPress architecture, open-source initiatives, or speaking at community conferences.
-					</p>
+
 				</div>
-				<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full sm:w-auto">
-					<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-slate-900 rounded-full hover:bg-white/90 font-body-sm font-semibold shadow-md transition-all text-[14px] group">
-						<span>Send Message</span>
-						<span class="material-symbols-outlined text-[17px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-					</a>
-					<a href="<?php echo esc_url( $contrib_url ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/10 text-white rounded-full hover:bg-white/15 font-body-sm font-medium border border-white/20 transition-all text-[14px]">
-						<span>View Contributions</span>
-					</a>
-				</div>
+
 			</div>
 		</section>
 
