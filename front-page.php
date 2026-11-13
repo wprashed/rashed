@@ -150,103 +150,111 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 2: ARCHITECTURAL METRICS (NUMERICAL SCALE)
+		     SECTION 2: ARCHITECTURAL METRICS (DEEP CARBON TELEMETRY STRIP)
 		     ================================================================= -->
-		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-surface-container-low/20 border-b border-surface-container-high/60 relative">
-			<div class="max-w-6xl mx-auto">
+		<section class="relative px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-[#0a0e17] text-white border-y border-[#1e293b] overflow-hidden">
+			<!-- Ambient technical backdrop glow -->
+			<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+			<div class="absolute -bottom-32 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+			<div class="max-w-6xl mx-auto relative z-10">
 				
-				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-white/10">
 					<div>
-						<div class="inline-flex items-center gap-2 font-label-code text-[11px] tracking-wider uppercase text-outline mb-1.5">
-							<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
-							<span>Numerical Scale &amp; Production Telemetry</span>
+						<div class="inline-flex items-center gap-2 font-mono text-[11px] tracking-widest uppercase text-emerald-400 mb-2">
+							<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+							<span>Live Telemetry &bull; Production Scale</span>
 						</div>
-						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal">
-							Work and community impact.
+						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-white font-normal tracking-tight">
+							Global footprint and community impact.
 						</h2>
 					</div>
-					<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary-container font-label-code text-[11.5px] transition-colors pb-1">
-						<span>View WordPress.org Profile</span>
-						<span class="material-symbols-outlined text-[14px]">north_east</span>
+					<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-slate-400 hover:text-white font-mono text-[11.5px] transition-colors pb-1 group">
+						<span>Verify on WordPress.org</span>
+						<span class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
 					</a>
 				</div>
 
-				<!-- Continuous Architectural Stat Telemetry Grid (Airy & Slick) -->
-				<div class="rounded-3xl border border-outline-variant/50 bg-surface-container-lowest/80 backdrop-blur-sm shadow-xs overflow-hidden">
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-surface-container-high/60">
+				<!-- Continuous Deep Carbon Telemetry Grid -->
+				<div class="rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md shadow-2xl overflow-hidden">
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
 						
-						<!-- Metric 1 -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-surface-container-low/30 transition-colors group">
+						<!-- Metric 1: Millions -->
+						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+							<div class="absolute top-0 left-0 right-0 h-[2px] bg-emerald-500 opacity-60"></div>
 							<div>
-								<div class="flex items-center justify-between font-label-code text-[10.5px] text-outline mb-3">
-									<span class="font-medium tracking-wider">01 // GLOBAL IMPACT</span>
-									<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
+									<span class="font-medium tracking-wider">01 // SCALE</span>
+									<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
 								</div>
-								<div class="font-display text-[46px] sm:text-[52px] text-on-surface font-light tracking-tight leading-none mb-2">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
 									<?php echo esc_html( $m1_val ); ?>
 								</div>
-								<h3 class="font-body-sm text-[13.5px] font-semibold text-on-surface">
+								<h3 class="font-mono text-[13px] font-semibold text-emerald-400 uppercase tracking-wide">
 									<?php echo esc_html( $m1_sub ); ?>
 								</h3>
 							</div>
-							<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 leading-relaxed">
+							<p class="font-body text-[12.5px] text-slate-300/80 mt-3 leading-relaxed">
 								<?php echo esc_html( $m1_desc ); ?>
 							</p>
 						</div>
 
-						<!-- Metric 2 -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-surface-container-low/30 transition-colors group">
+						<!-- Metric 2: 60+ Plugins -->
+						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+							<div class="absolute top-0 left-0 right-0 h-[2px] bg-blue-500 opacity-60"></div>
 							<div>
-								<div class="flex items-center justify-between font-label-code text-[10.5px] text-outline mb-3">
+								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
 									<span class="font-medium tracking-wider">02 // PLUGINS</span>
-									<span class="material-symbols-outlined text-[14px] text-outline-variant">extension</span>
+									<span class="material-symbols-outlined text-[15px] text-blue-400">extension</span>
 								</div>
-								<div class="font-display text-[46px] sm:text-[52px] text-on-surface font-light tracking-tight leading-none mb-2">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
 									<?php echo esc_html( $m2_val ); ?>
 								</div>
-								<h3 class="font-body-sm text-[13.5px] font-semibold text-on-surface">
+								<h3 class="font-mono text-[13px] font-semibold text-blue-400 uppercase tracking-wide">
 									<?php echo esc_html( $m2_sub ); ?>
 								</h3>
 							</div>
-							<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 leading-relaxed">
+							<p class="font-body text-[12.5px] text-slate-300/80 mt-3 leading-relaxed">
 								<?php echo esc_html( $m2_desc ); ?>
 							</p>
 						</div>
 
-						<!-- Metric 3 -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-surface-container-low/30 transition-colors group">
+						<!-- Metric 3: 3 Core Releases -->
+						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+							<div class="absolute top-0 left-0 right-0 h-[2px] bg-purple-500 opacity-60"></div>
 							<div>
-								<div class="flex items-center justify-between font-label-code text-[10.5px] text-outline mb-3">
-									<span class="font-medium tracking-wider">03 // CORE RELEASES</span>
-									<span class="material-symbols-outlined text-[14px] text-outline-variant">deployed_code</span>
+								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
+									<span class="font-medium tracking-wider">03 // UPSTREAM</span>
+									<span class="material-symbols-outlined text-[15px] text-purple-400">deployed_code</span>
 								</div>
-								<div class="font-display text-[46px] sm:text-[52px] text-on-surface font-light tracking-tight leading-none mb-2">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
 									<?php echo esc_html( $m3_val ); ?>
 								</div>
-								<h3 class="font-body-sm text-[13.5px] font-semibold text-on-surface">
+								<h3 class="font-mono text-[13px] font-semibold text-purple-400 uppercase tracking-wide">
 									<?php echo esc_html( $m3_sub ); ?>
 								</h3>
 							</div>
-							<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 leading-relaxed">
+							<p class="font-body text-[12.5px] text-slate-300/80 mt-3 leading-relaxed">
 								<?php echo esc_html( $m3_desc ); ?>
 							</p>
 						</div>
 
-						<!-- Metric 4 -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-surface-container-low/30 transition-colors group">
+						<!-- Metric 4: 11 Verified Badges -->
+						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+							<div class="absolute top-0 left-0 right-0 h-[2px] bg-amber-500 opacity-60"></div>
 							<div>
-								<div class="flex items-center justify-between font-label-code text-[10.5px] text-outline mb-3">
+								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
 									<span class="font-medium tracking-wider">04 // RECOGNITION</span>
-									<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
+									<span class="material-symbols-outlined text-[15px] text-amber-400">verified</span>
 								</div>
-								<div class="font-display text-[46px] sm:text-[52px] text-on-surface font-light tracking-tight leading-none mb-2">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
 									<?php echo esc_html( $m4_val ); ?>
 								</div>
-								<h3 class="font-body-sm text-[13.5px] font-semibold text-on-surface">
+								<h3 class="font-mono text-[13px] font-semibold text-amber-400 uppercase tracking-wide">
 									<?php echo esc_html( $m4_sub ); ?>
 								</h3>
 							</div>
-							<p class="font-body-sm text-[12px] text-on-surface-variant mt-2 leading-relaxed">
+							<p class="font-body text-[12.5px] text-slate-300/80 mt-3 leading-relaxed">
 								<?php echo esc_html( $m4_desc ); ?>
 							</p>
 						</div>
@@ -258,103 +266,155 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 3: ECOSYSTEM RECOGNITION BANNER (11 Badges & Upstream PRs)
+		     SECTION 3: ECOSYSTEM RECOGNITION (ASYMMETRIC DUAL-PANE LEDGER)
 		     ================================================================= -->
 		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-surface-container-lowest border-b border-surface-container-high/60 relative overflow-hidden">
 			<div class="max-w-6xl mx-auto">
 				
-				<!-- Elevated Contributor Ledger Card -->
-				<div class="relative p-7 sm:p-9 md:p-10 rounded-3xl bg-gradient-to-br from-surface-container-low/40 via-surface-container-lowest to-surface-container-low/20 border border-outline-variant/60 hover:border-outline-variant/90 transition-all duration-300 shadow-sm hover:shadow-card-soft group">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 					
-					<!-- Top Architectural Ledger Bar -->
-					<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-surface-container-high/60 relative z-10">
-						<div class="flex items-center gap-3.5">
-							<div class="w-8 h-8 rounded-full bg-[#0073aa]/10 border border-[#0073aa]/25 text-[#0073aa] dark:text-[#38bdf8] flex items-center justify-center shrink-0 shadow-xs">
-								<svg class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-									<path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/>
-								</svg>
+					<!-- Left Editorial Pane (5 cols) -->
+					<div class="lg:col-span-5 flex flex-col justify-between h-full">
+						<div>
+							<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0073aa]/10 text-[#0073aa] dark:text-[#38bdf8] font-mono text-[11px] uppercase tracking-wider border border-[#0073aa]/25 mb-4">
+								<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0zm0 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11"/></svg>
+								<span class="font-semibold">Upstream Ledger</span>
 							</div>
-							<div>
-								<span class="font-label-code text-[11px] uppercase tracking-wider text-outline font-semibold block">
-									Upstream Open-Source Ledger
+
+							<h2 class="font-display text-2xl sm:text-3xl lg:text-[34px] text-on-surface font-normal leading-[1.15] tracking-tight mb-4">
+								Recognized Across WordPress Core, AI &amp; Open Ecosystems
+							</h2>
+
+							<p class="font-body text-[14.5px] text-on-surface-variant leading-relaxed mb-6">
+								Active upstream contributor across WordPress Core (6.9, 7.0, 7.1), WooCommerce, Jetpack, the official WordPress AI Initiative, Three.js, Vue.js, WordCamp organizing, and global open-source ecosystems.
+							</p>
+
+							<!-- Trust Metrics Pill Counters -->
+							<div class="flex flex-wrap items-center gap-2 mb-8 font-mono text-[11px]">
+								<span class="px-3 py-1.5 rounded-xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-semibold border border-emerald-500/20 flex items-center gap-1.5">
+									<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+									<span>11 Official Badges</span>
 								</span>
-								<span class="font-display text-[15px] text-on-surface font-medium">WordPress.org Verified Contributor</span>
+								<span class="px-3 py-1.5 rounded-xl bg-primary-container/10 text-primary-container font-semibold border border-primary-container/20">
+									3 Core Releases Credited
+								</span>
+								<span class="px-3 py-1.5 rounded-xl bg-surface-container text-on-surface font-medium border border-outline-variant/40">
+									130+ Pull Requests
+								</span>
 							</div>
 						</div>
-						<div class="flex items-center gap-2.5 font-label-code text-[11px]">
-							<span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-semibold border border-emerald-500/20">
-								11 Official Badges
-							</span>
-							<span class="px-3 py-1 rounded-full bg-primary-container/10 text-primary-container font-semibold border border-primary-container/20">
-								3 Core Releases Credited
-							</span>
+
+						<div class="pt-6 border-t border-surface-container-high/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+							<a href="<?php echo esc_url( home_url( '/contributions/' ) ); ?>" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-on-surface text-surface hover:bg-primary hover:text-white font-mono text-[12px] font-semibold transition-all shadow-xs group/link">
+								<span>View Complete Ledger</span>
+								<span class="material-symbols-outlined text-[15px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+							</a>
+							<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="font-mono text-[11px] text-outline hover:text-primary transition-colors inline-flex items-center gap-1">
+								<span>profiles.wordpress.org</span>
+								<span class="material-symbols-outlined text-[13px]">north_east</span>
+							</a>
 						</div>
 					</div>
 
-					<!-- Main Editorial Content & Narrative -->
-					<div class="my-6 relative z-10">
-						<h3 class="font-display text-2xl sm:text-3xl text-on-surface font-normal tracking-tight mb-2.5">
-							Recognized Across WordPress Core, AI &amp; Open-Source Ecosystems
-						</h3>
-						<p class="font-body-md text-[14.5px] text-on-surface-variant leading-relaxed max-w-3xl">
-							Active upstream contributor across WordPress Core (6.9, 7.0, 7.1), WooCommerce, Jetpack, the official WordPress AI Initiative, Three.js, Vue.js, WordCamp organizing, and global open-source ecosystems.
-						</p>
-					</div>
+					<!-- Right Interactive Badge Matrix (7 cols) -->
+					<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+						
+						<!-- Badge 1: Core Contributor -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#d63638]/20 hover:border-[#d63638]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#d63638]/10 text-[#d63638] dark:text-[#f87171] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#d63638] font-bold px-2 py-0.5 rounded-md bg-[#d63638]/10">Core '25</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#d63638] transition-colors">Core Contributor</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Authored patches for core editor, media router &amp; internationalization.</p>
+						</div>
 
-					<!-- Visual Micro-Badges Ribbon -->
-					<div class="flex flex-wrap items-center gap-2.5 pt-1 relative z-10">
-						<!-- Core -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#d63638]/30 bg-[#d63638]/5 hover:bg-[#d63638]/10 text-[#d63638] dark:text-[#f87171] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-							<span>Core Contributor ('25)</span>
-						</span>
-						<!-- Core AI -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#7b2cbf]/30 bg-[#7b2cbf]/5 hover:bg-[#7b2cbf]/10 text-[#7b2cbf] dark:text-[#c084fc] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M12 7l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor"></path></svg>
-							<span>Core AI ('26)</span>
-						</span>
-						<!-- Meta -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#50575e]/30 bg-[#50575e]/5 hover:bg-[#50575e]/10 text-[#50575e] dark:text-[#94a3b8] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="4" rx="1"></rect><rect x="2" y="17" width="5" height="4" rx="1"></rect><rect x="17" y="17" width="5" height="4" rx="1"></rect><path d="M12 7v5M4.5 17v-3h15v3M12 12v5"></path></svg>
-							<span>Meta ('26)</span>
-						</span>
-						<!-- Gutenberg Patterns -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#503291]/30 bg-[#503291]/5 hover:bg-[#503291]/10 text-[#503291] dark:text-[#a5b4fc] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="12" x2="12" y2="21"></line></svg>
-							<span>Pattern Author ('26)</span>
-						</span>
-						<!-- Plugins -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#d94f00]/30 bg-[#d94f00]/5 hover:bg-[#d94f00]/10 text-[#d94f00] dark:text-[#fdba74] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M8 2v4M16 2v4"></path><rect x="5" y="6" width="14" height="7" rx="2"></rect></svg>
-							<span>Plugin Developer</span>
-						</span>
-						<!-- WordCamp -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#d97706]/30 bg-[#d97706]/5 hover:bg-[#d97706]/10 text-[#d97706] dark:text-[#fde047] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11v3a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"></path><path d="M15 9a4 4 0 0 1 0 6"></path></svg>
-							<span>WordCamp Organizer &amp; Speaker</span>
-						</span>
-						<!-- Support -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#0085ba]/30 bg-[#0085ba]/5 hover:bg-[#0085ba]/10 text-[#0085ba] dark:text-[#7dd3fc] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-							<span>Support ('26)</span>
-						</span>
-						<!-- Polyglots -->
-						<span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#9b1364]/30 bg-[#9b1364]/5 hover:bg-[#9b1364]/10 text-[#9b1364] dark:text-[#f472b6] font-label-code text-[11px] font-medium transition-all hover:scale-[1.02]">
-							<svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 12M11 8L5 20M3 16h8"></path><path d="M14 4h7M17.5 4v4"></path></svg>
-							<span>Polyglots Editor</span>
-						</span>
-					</div>
+						<!-- Badge 2: Core AI -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#7b2cbf]/20 hover:border-[#7b2cbf]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#7b2cbf]/10 text-[#7b2cbf] dark:text-[#c084fc] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M12 7l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" fill="currentColor"></path></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#7b2cbf] font-bold px-2 py-0.5 rounded-md bg-[#7b2cbf]/10">AI '26</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#7b2cbf] transition-colors">Core AI Specialist</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Upstream guidelines and translation models for official WordPress AI.</p>
+						</div>
 
-					<!-- Bottom Action Footer Strip -->
-					<div class="pt-6 mt-6 border-t border-surface-container-high/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 relative z-10">
-						<span class="font-label-code text-[11px] text-outline flex items-center gap-1.5">
-							<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-							<span>profiles.wordpress.org/wprashed</span>
-						</span>
-						<a href="<?php echo esc_url( home_url( '/contributions/' ) ); ?>" class="inline-flex items-center gap-2 font-label-code text-[12px] font-semibold text-primary-container hover:text-primary transition-all group/link">
-							<span>Explore Full Contribution Ledger &amp; Badges</span>
-							<span class="material-symbols-outlined text-[15px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
-						</a>
+						<!-- Badge 3: Meta & Infrastructure -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#50575e]/20 hover:border-[#50575e]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#50575e]/10 text-[#50575e] dark:text-[#94a3b8] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="4" rx="1"></rect><rect x="2" y="17" width="5" height="4" rx="1"></rect><rect x="17" y="17" width="5" height="4" rx="1"></rect><path d="M12 7v5M4.5 17v-3h15v3M12 12v5"></path></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#50575e] font-bold px-2 py-0.5 rounded-md bg-[#50575e]/10">Meta '26</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#50575e] transition-colors">Meta &amp; Infrastructure</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Architecting ecosystem tooling, profiles and developer infrastructure.</p>
+						</div>
+
+						<!-- Badge 4: Pattern Author -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#503291]/20 hover:border-[#503291]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#503291]/10 text-[#503291] dark:text-[#a5b4fc] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="12" x2="12" y2="21"></line></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#503291] font-bold px-2 py-0.5 rounded-md bg-[#503291]/10">Pattern '26</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#503291] transition-colors">Pattern Author</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Curating production block patterns for global creators and sites.</p>
+						</div>
+
+						<!-- Badge 5: Plugin Developer -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#d94f00]/20 hover:border-[#d94f00]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#d94f00]/10 text-[#d94f00] dark:text-[#fdba74] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M8 2v4M16 2v4"></path><rect x="5" y="6" width="14" height="7" rx="2"></rect></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#d94f00] font-bold px-2 py-0.5 rounded-md bg-[#d94f00]/10">Directory</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#d94f00] transition-colors">Plugin Developer</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Published and maintained tools on the official WordPress.org repository.</p>
+						</div>
+
+						<!-- Badge 6: WordCamp Speaker -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#d97706]/20 hover:border-[#d97706]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#d97706]/10 text-[#d97706] dark:text-[#fde047] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11v3a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"></path><path d="M15 9a4 4 0 0 1 0 6"></path></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#d97706] font-bold px-2 py-0.5 rounded-md bg-[#d97706]/10">Community</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#d97706] transition-colors">WordCamp Speaker</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Keynote speaker and Contributor Table lead across international WordCamps.</p>
+						</div>
+
+						<!-- Badge 7: Technical Support -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#0085ba]/20 hover:border-[#0085ba]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#0085ba]/10 text-[#0085ba] dark:text-[#7dd3fc] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#0085ba] font-bold px-2 py-0.5 rounded-md bg-[#0085ba]/10">Support '26</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#0085ba] transition-colors">Support Lead</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Mentoring and solving critical site issues across thousands of forum inquiries.</p>
+						</div>
+
+						<!-- Badge 8: Polyglots Editor -->
+						<div class="p-4 rounded-2xl bg-surface-container-low/50 hover:bg-surface-container-lowest border border-[#9b1364]/20 hover:border-[#9b1364]/50 hover:-translate-y-0.5 transition-all shadow-2xs group">
+							<div class="flex items-start justify-between mb-2">
+								<div class="w-8 h-8 rounded-xl bg-[#9b1364]/10 text-[#9b1364] dark:text-[#f472b6] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 12M11 8L5 20M3 16h8"></path><path d="M14 4h7M17.5 4v4"></path></svg>
+								</div>
+								<span class="font-mono text-[10px] uppercase tracking-wider text-[#9b1364] font-bold px-2 py-0.5 rounded-md bg-[#9b1364]/10">Polyglots</span>
+							</div>
+							<h3 class="font-display text-[15px] text-on-surface font-semibold group-hover:text-[#9b1364] transition-colors">Polyglots Editor</h3>
+							<p class="font-body text-[12px] text-on-surface-variant mt-1 leading-snug">Translating and validating core packages for international languages.</p>
+						</div>
+
 					</div>
 
 				</div>
@@ -363,197 +423,246 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 4: SIGNATURE PLATFORMS & SCALE
+		     SECTION 4: SIGNATURE OPEN-SOURCE REPOSITORIES (FLAGSHIP + DECK)
 		     ================================================================= -->
-		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-surface-container-low/20 border-b border-surface-container-high/60">
+		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-[#f1f5f9] dark:bg-[#0c121e] border-b border-surface-container-high/60">
 			<div class="max-w-6xl mx-auto flex flex-col gap-10">
 				
 				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
 					<div>
-						<div class="inline-flex items-center gap-2 font-label-code text-[11px] tracking-wider uppercase text-outline mb-1.5">
+						<div class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-outline mb-1.5">
 							<span class="w-1.5 h-1.5 bg-[#0073aa] rounded-full"></span>
-							<span>Featured Code Repositories</span>
+							<span>Featured Code Repositories &bull; Open Source</span>
 						</div>
 						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal">
-							Projects &amp; Open-Source Repositories I Build
+							Projects &amp; Upstream Repositories I Build
 						</h2>
 					</div>
 					<div class="flex items-center gap-3">
-						<span class="font-label-code text-[11px] text-on-surface-variant hidden sm:inline">
+						<span class="font-mono text-[11px] text-on-surface-variant hidden sm:inline">
 							Powering Millions of Websites
 						</span>
-						<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="font-label-code text-[11.5px] text-primary-container hover:text-primary inline-flex items-center gap-1.5 transition-colors pb-1">
+						<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="font-mono text-[11.5px] text-primary-container hover:text-primary inline-flex items-center gap-1.5 transition-colors pb-1">
 							<span>github.com/wprashed</span>
 							<span class="material-symbols-outlined text-[14px]">north_east</span>
 						</a>
 					</div>
 				</div>
 
-				<!-- 6-Card Official GitHub Repositories Grid (Elevated & Tactile) -->
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+				<!-- Dual-Hero Flagship Showcases (2 Large Architected Cards) -->
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					
-					<!-- Card 1: WordPress/wordpress-develop -->
-					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-[#0073aa]/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0073aa] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<!-- Flagship 1: WordPress Core -->
+					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-8 sm:p-9 rounded-3xl border border-outline-variant/50 hover:border-[#0073aa]/60 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-sm flex flex-col justify-between overflow-hidden">
+						<div class="absolute top-0 left-0 right-0 h-[4px] bg-[#0073aa]"></div>
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">01 // WORDPRESS CORE</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-4">
+								<span class="font-mono text-[11px] text-[#0073aa] uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-[#0073aa]/10">01 // CORE ARCHITECTURE</span>
+								<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+									<span class="material-symbols-outlined text-[14px]">fork_right</span>
+									<span>trunk</span>
+								</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
+
+							<h3 class="font-display text-2xl sm:text-3xl text-on-surface font-normal mb-3 group-hover:text-primary-container transition-colors">
 								WordPress Core
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-400 font-label-code text-[11px] font-semibold border border-blue-500/20">
-								<span>30 PRs · Major Core Releases</span>
+
+							<div class="flex flex-wrap items-center gap-2 mb-4 font-mono text-[11px]">
+								<span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-400 font-semibold border border-blue-500/20">
+									30+ PRs Merged
+								</span>
+								<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium border border-outline-variant/40">
+									Credited in 6.9, 7.0 &amp; 7.1
+								</span>
 							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-								Upstream contributions to WordPress Core powering over 43% of the internet. Authoring patches for editor components, media routers, internationalization, and platform stability across WordPress 6.9, 7.0, and 7.1.
+
+							<p class="font-body text-[13.5px] text-on-surface-variant leading-relaxed mb-5">
+								Upstream contributions to WordPress Core powering over 43% of all global websites. Authoring patches for block editor components, media routers, internationalization, and platform stability.
 							</p>
+
+							<!-- Key Architectural Impact Points -->
+							<div class="space-y-1.5 pt-2 border-t border-surface-container-high/60 font-body text-[12.5px] text-on-surface-variant">
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+									<span>Editor &amp; DataViews focus containment popover fixes</span>
+								</div>
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+									<span>REST API &amp; media query route resilience under load</span>
+								</div>
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+									<span>Polyglots translation infrastructure and string indexing</span>
+								</div>
+							</div>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
+
+						<div class="pt-5 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[11.5px] text-outline">
 							<span>WordPress/wordpress-develop</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">Core Contributor ↗</span>
+							<span class="text-on-surface group-hover:text-primary-container font-semibold inline-flex items-center gap-1">
+								<span>Inspect Code</span>
+								<span class="material-symbols-outlined text-[14px]">north_east</span>
+							</span>
 						</div>
 					</a>
 
-					<!-- Card 2: WordPress/performance -->
-					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-emerald-500/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<!-- Flagship 2: Performance Suite -->
+					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-8 sm:p-9 rounded-3xl border border-outline-variant/50 hover:border-emerald-500/60 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-sm flex flex-col justify-between overflow-hidden">
+						<div class="absolute top-0 left-0 right-0 h-[4px] bg-emerald-500"></div>
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">02 // PERFORMANCE LAB</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-4">
+								<span class="font-mono text-[11px] text-emerald-700 dark:text-emerald-400 uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-emerald-500/10">02 // PERFORMANCE LAB</span>
+								<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+									<span class="material-symbols-outlined text-[14px]">fork_right</span>
+									<span>trunk</span>
+								</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
+
+							<h3 class="font-display text-2xl sm:text-3xl text-on-surface font-normal mb-3 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
 								Performance Suite
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-label-code text-[11px] font-semibold border border-emerald-500/20">
-								<span>Optimization Detective &amp; View Transitions</span>
+
+							<div class="flex flex-wrap items-center gap-2 mb-4 font-mono text-[11px]">
+								<span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-semibold border border-emerald-500/20">
+									Optimization Detective &amp; Core Vitals
+								</span>
+								<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium border border-outline-variant/40">
+									8 PRs Authored
+								</span>
 							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+
+							<p class="font-body text-[13.5px] text-on-surface-variant leading-relaxed mb-5">
 								Official performance testbed created by the WordPress Performance Team. Authored pull requests improving Optimization Detective tag metrics validation, mismatched ETag cache transients, and View Transitions UI filter hooks.
 							</p>
+
+							<!-- Key Architectural Impact Points -->
+							<div class="space-y-1.5 pt-2 border-t border-surface-container-high/60 font-body text-[12.5px] text-on-surface-variant">
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+									<span>Optimization Detective tag metrics validation pipeline</span>
+								</div>
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+									<span>ETag header transient cache invalidation fixes</span>
+								</div>
+								<div class="flex items-center gap-2">
+									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+									<span>View Transitions UI filter hooks and client navigation</span>
+								</div>
+							</div>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
+
+						<div class="pt-5 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[11.5px] text-outline">
 							<span>WordPress/performance</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">8 PRs Authored ↗</span>
+							<span class="text-on-surface group-hover:text-emerald-700 dark:group-hover:text-emerald-400 font-semibold inline-flex items-center gap-1">
+								<span>Inspect Code</span>
+								<span class="material-symbols-outlined text-[14px]">north_east</span>
+							</span>
 						</div>
 					</a>
 
-					<!-- Card 3: WordPress/gutenberg -->
-					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-purple-500/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-purple-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+				</div>
+
+				<!-- Secondary Deck (4 Compact Cards) -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+					
+					<!-- Deck Card 1: Gutenberg & DataViews -->
+					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-purple-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">03 // BLOCK EDITOR</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-3">
+								<span class="font-mono text-[10px] text-purple-700 dark:text-purple-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-500/10">BLOCK EDITOR</span>
+								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-purple-600 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
+							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-purple-600 transition-colors">
 								Gutenberg &amp; DataViews
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-[#7f54b3]/10 text-[#7f54b3] dark:text-[#c084fc] font-label-code text-[11px] font-semibold border border-[#7f54b3]/20">
-								<span>UI Architecture &amp; TypeScript</span>
-							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-								Contributed to WordPress's block-based editing engine and modern DataViews interface. Authored fixes for dialog focus popover containment and Field.sort TypeScript type definitions.
+							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+								Authored fixes for dialog focus popover containment and Field.sort TypeScript type definitions in WordPress's core UI engine.
 							</p>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
+						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
 							<span>WordPress/gutenberg</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">Merged Upstream ↗</span>
+							<span class="text-on-surface font-medium">Merged ↗</span>
 						</div>
 					</a>
 
-					<!-- Card 4: WordPress/ai & Playground -->
-					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-cyan-500/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<!-- Deck Card 2: WordPress AI & Playground -->
+					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-cyan-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">04 // AI &amp; WEBASSEMBLY</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-3">
+								<span class="font-mono text-[10px] text-cyan-700 dark:text-cyan-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-500/10">AI &amp; WASM</span>
+								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-cyan-600 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
-								WordPress AI &amp; Playground
+							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-cyan-600 transition-colors">
+								AI &amp; Playground
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 font-label-code text-[11px] font-semibold border border-cyan-500/20">
-								<span>Core AI Guidelines &amp; WASM</span>
-							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-								Upstream contributions integrating Content Translation guidelines and knowledge systems for the official WordPress AI initiative, and Blueprints multisite REQUEST_URI scoping in WordPress Playground (in-browser WASM).
+							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+								Integrated Content Translation guidelines for official WordPress AI, and Blueprints multisite REQUEST_URI scoping in WASM.
 							</p>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
-							<span>WordPress/ai · Playground</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">Merged Upstream ↗</span>
+						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
+							<span>WordPress/ai · wasm</span>
+							<span class="text-on-surface font-medium">Merged ↗</span>
 						</div>
 					</a>
 
-					<!-- Card 5: wp-cli Suite -->
-					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-amber-500/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-amber-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<!-- Deck Card 3: WP-CLI & Config Tools -->
+					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-amber-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">05 // CLI TOOLING</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-3">
+								<span class="font-mono text-[10px] text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/10">CLI TOOLING</span>
+								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-amber-600 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
+							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-amber-600 transition-colors">
 								WP-CLI &amp; Config Tools
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 font-label-code text-[11px] font-semibold border border-amber-500/20">
-								<span>Atomic Config &amp; CLI Commands</span>
-							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-								Engineered atomic temporary file writing in wp-config-transformer to prevent corruption on write failures, improved custom remote SSH binary parameters, and added multi-ID embed cache clearing.
+							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+								Engineered atomic temporary file writing in wp-config-transformer to prevent corruptions, improved SSH binary parameters.
 							</p>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
-							<span>wp-cli/wp-cli · transformer</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">Upstream Contributor ↗</span>
+						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
+							<span>wp-cli/wp-cli</span>
+							<span class="text-on-surface font-medium">Upstream ↗</span>
 						</div>
 					</a>
 
-					<!-- Card 6: Tutor LMS Platform -->
-					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 hover:border-blue-600/50 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-xs flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<!-- Deck Card 4: Tutor LMS Platform -->
+					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-blue-600/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="font-label-code text-[10.5px] text-outline uppercase font-medium tracking-wider">06 // LMS PLATFORM</span>
-								<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-primary-container group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all">north_east</span>
+							<div class="flex items-center justify-between mb-3">
+								<span class="font-mono text-[10px] text-blue-700 dark:text-blue-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-blue-600/10">LMS #1</span>
+								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-blue-600 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-2xl text-on-surface font-normal mb-2.5 group-hover:text-primary-container transition-colors">
+							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-blue-600 transition-colors">
 								Tutor LMS Platform
 							</h3>
-							<div class="inline-flex items-center gap-1.5 mb-3.5 px-3 py-1 rounded-full bg-blue-600/10 text-blue-700 dark:text-blue-400 font-label-code text-[11px] font-semibold border border-blue-600/20">
-								<span>#1 WordPress LMS · 100K+ Sites</span>
-							</div>
-							<p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
-								Leading technical support operations and contributing to the core codebase of the leading WordPress LMS plugin. Engineered integrations, social metadata sanitizer fixes, and multisite course architecture.
+							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+								Powering 100K+ educational sites. Leading tech support operations and contributing to core code, multisite and metadata security.
 							</p>
 						</div>
-						<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
-							<span>Tech Support Lead · Ollyo</span>
-							<span class="text-on-surface group-hover:text-primary-container font-medium">themeum/tutor ↗</span>
+						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
+							<span>themeum/tutor</span>
+							<span class="text-on-surface font-medium">100K+ Sites ↗</span>
 						</div>
 					</a>
 
 				</div>
 
 				<!-- Extra GitHub Repos Banner -->
-				<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest/80 border border-outline-variant/50 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-on-surface-variant font-label-code text-[12px]">
+				<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-on-surface-variant font-mono text-[12px]">
 					<div class="flex flex-wrap items-center gap-2.5">
 						<span class="text-on-surface font-semibold flex items-center gap-1.5">
 							<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
 							<span>Also contributing to:</span>
 						</span>
 						<a href="https://github.com/woocommerce/woocommerce" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">woocommerce/woocommerce</a>
-						<span class="text-outline-variant">·</span>
+						<span class="text-outline-variant">&bull;</span>
 						<a href="https://github.com/Automattic/jetpack" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">Automattic/jetpack</a>
-						<span class="text-outline-variant">·</span>
+						<span class="text-outline-variant">&bull;</span>
 						<a href="https://github.com/WordPress/openverse" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">WordPress/openverse</a>
-						<span class="text-outline-variant">·</span>
+						<span class="text-outline-variant">&bull;</span>
 						<a href="https://github.com/WordPress/wordcamp.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">WordPress/wordcamp.org</a>
-						<span class="text-outline-variant">·</span>
-						<a href="https://github.com/wprashed/lms-security-dashboard" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">wprashed/lms-security-dashboard</a>
 					</div>
 					<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary-container font-semibold hover:text-primary shrink-0 transition-colors">
 						<span>View 130+ PRs on GitHub</span>
@@ -565,176 +674,168 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 5: GLOBAL CLIENTS & INSTITUTIONAL TRUST
+		     SECTION 5: GLOBAL CLIENTS & INSTITUTIONAL TRUST (EXECUTIVE BENTO)
 		     ================================================================= -->
 		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-surface-container-lowest border-b border-surface-container-high/60">
 			<div class="max-w-6xl mx-auto flex flex-col gap-10">
 				
 				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
 					<div>
-						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-code text-[11px] uppercase tracking-wider border border-outline-variant/40 mb-2.5">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface font-mono text-[11px] uppercase tracking-wider border border-outline-variant/40 mb-2.5">
 							<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
-							<span>Global Clients &amp; Enterprise Impact</span>
+							<span>Global Clients &bull; Institutional Trust</span>
 						</div>
 						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal">
 							Trusted by Global Organizations, Enterprises &amp; Governments
 						</h2>
-						<p class="font-body-sm text-[13.5px] text-on-surface-variant mt-2 max-w-2xl leading-relaxed">
+						<p class="font-body text-[14px] text-on-surface-variant mt-2 max-w-2xl leading-relaxed">
 							Delivering robust digital solutions, accessible web architecture, and mission-critical systems for international agencies, leading corporations across the USA and Gulf region, and sovereign national governments.
 						</p>
 					</div>
-					<div class="font-label-code text-[11px] text-outline flex items-center gap-2 shrink-0 pb-1">
+					<div class="font-mono text-[11px] text-outline flex items-center gap-2 shrink-0 pb-1">
 						<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
 						<span>Proven Enterprise Delivery</span>
 					</div>
 				</div>
 
-				<!-- 7-Card Institutional & Enterprise Trust Grid -->
-				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+				<!-- Executive Bento Grid -->
+				<div class="flex flex-col gap-6">
 					
-					<!-- 1. UNICEF -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#1cabe2]/10 text-[#1cabe2] dark:text-[#38bdf8] font-label-code text-[10.5px] font-semibold border border-[#1cabe2]/20">
-									United Nations Agency
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">public</span>
+					<!-- Top Hero Bento Card: Multiple National Governments -->
+					<div class="relative bg-gradient-to-br from-[#090d16] via-[#1e1b4b] to-[#0f172a] text-white p-8 sm:p-10 md:p-12 rounded-3xl border border-indigo-500/30 shadow-xl overflow-hidden group">
+						<div class="absolute -top-24 -right-24 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+						<div class="relative z-10 flex flex-col justify-between h-full">
+							<div>
+								<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+									<span class="px-3.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 flex items-center gap-1.5">
+										<span class="material-symbols-outlined text-[15px]">account_balance</span>
+										<span>Sovereign Digital Services &bull; Public Sector</span>
+									</span>
+									<span class="font-mono text-[11px] text-indigo-200/70 flex items-center gap-1.5">
+										<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+										<span>Zero-Downtime Architecture</span>
+									</span>
+								</div>
+
+								<h3 class="font-display text-2xl sm:text-3xl lg:text-4xl text-white font-normal mb-3 leading-snug">
+									Multiple National Governments
+								</h3>
+
+								<p class="font-body text-[14.5px] text-indigo-100/80 max-w-3xl leading-relaxed mb-6">
+									Developed mission-critical government web portals, high-security public sector systems, and high-concurrency citizen-facing digital services across multiple countries, ensuring strict accessibility standards, data protection, and zero-downtime reliability.
+								</p>
 							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">UNICEF</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Engineered digital platforms, accessible tools, and scalable web solutions supporting children’s health, education, and humanitarian initiatives globally.
-							</p>
-						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>United Nations Children's Fund</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
+
+							<div class="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11.5px] text-indigo-200/80">
+								<div class="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+									<span class="inline-flex items-center gap-2"><span>Civil Portals</span> <span class="text-white/30">&bull;</span></span>
+									<span class="inline-flex items-center gap-2"><span>National Ministries</span> <span class="text-white/30">&bull;</span></span>
+									<span class="inline-flex items-center gap-2"><span>Public Digital Services</span> <span class="text-white/30">&bull;</span></span>
+									<span>Strict Compliance &amp; WCAG AAA</span>
+								</div>
+								<div class="flex items-center gap-1.5 text-emerald-400 shrink-0 font-semibold">
+									<span class="material-symbols-outlined text-[16px]">verified_user</span>
+									<span>Verified Sovereign Track Record</span>
+								</div>
+							</div>
 						</div>
 					</div>
 
-					<!-- 2. ILO (International Labour Organization) -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#1e40af]/10 text-[#1e40af] dark:text-[#93c5fd] font-label-code text-[10.5px] font-semibold border border-[#1e40af]/20">
-									UN Specialized Agency
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">balance</span>
+					<!-- 4 Strategic Enterprise Pillar Cards (2x2 Grid) -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						
+						<!-- Pillar 1: UN Agencies (UNICEF & ILO) -->
+						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#1cabe2]/30 hover:border-[#1cabe2]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+							<div>
+								<div class="flex items-center justify-between mb-4">
+									<span class="px-3 py-1 rounded-full bg-[#1cabe2]/10 text-[#1cabe2] dark:text-[#38bdf8] font-mono text-[11px] font-semibold border border-[#1cabe2]/20 flex items-center gap-1.5">
+										<span class="material-symbols-outlined text-[15px]">public</span>
+										<span>United Nations Agencies</span>
+									</span>
+									<span class="font-mono text-[11px] text-outline">Geneva &bull; Global</span>
+								</div>
+								<h3 class="font-display text-2xl text-on-surface font-medium mb-2.5">
+									UNICEF &amp; International Labour Organization (ILO)
+								</h3>
+								<p class="font-body text-[13px] text-on-surface-variant leading-relaxed mb-4">
+									Engineered digital platforms, accessible tools, and scalable multilingual communication systems advancing global children’s health, education, and international labour standards worldwide.
+								</p>
 							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">International Labour Organization</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Developed reliable technical web architecture, international policy portals, and multilingual communication platforms advancing labor standards and worker rights worldwide.
-							</p>
+							<div class="pt-4 border-t border-surface-container-high/60 font-mono text-[11px] text-outline flex items-center justify-between">
+								<span>Humanitarian &amp; Policy Infrastructure</span>
+								<span class="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+							</div>
 						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>ILO // Geneva &amp; Global Missions</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
-						</div>
-					</div>
 
-					<!-- 3. Leading US Enterprises -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#2563eb]/10 text-[#2563eb] dark:text-[#60a5fa] font-label-code text-[10.5px] font-semibold border border-[#2563eb]/20">
-									United States Enterprise
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">corporate_fare</span>
+						<!-- Pillar 2: Leading US Enterprises -->
+						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#2563eb]/30 hover:border-[#2563eb]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+							<div>
+								<div class="flex items-center justify-between mb-4">
+									<span class="px-3 py-1 rounded-full bg-[#2563eb]/10 text-[#2563eb] dark:text-[#60a5fa] font-mono text-[11px] font-semibold border border-[#2563eb]/20 flex items-center gap-1.5">
+										<span class="material-symbols-outlined text-[15px]">corporate_fare</span>
+										<span>United States Enterprise</span>
+									</span>
+									<span class="font-mono text-[11px] text-outline">Silicon Valley &bull; USA</span>
+								</div>
+								<h3 class="font-display text-2xl text-on-surface font-medium mb-2.5">
+									Leading US Enterprises &amp; SaaS Scale
+								</h3>
+								<p class="font-body text-[13px] text-on-surface-variant leading-relaxed mb-4">
+									Partnered with prominent United States corporations, technology ventures, and high-growth SaaS firms across the US to deliver resilient web architectures, automated workflows, and high-performance digital products.
+								</p>
 							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">Leading US Enterprises</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Partnered with prominent United States corporations, technology ventures, and high-growth SaaS firms across the US to deliver resilient web architectures, automated workflows, and high-performance digital products.
-							</p>
+							<div class="pt-4 border-t border-surface-container-high/60 font-mono text-[11px] text-outline flex items-center justify-between">
+								<span>Corporate Tech &amp; Cloud Workflows</span>
+								<span class="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+							</div>
 						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>USA Corporate &amp; Tech Scale</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
-						</div>
-					</div>
 
-					<!-- 4. Gulf Regional Conglomerates -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#0d9488]/10 text-[#0d9488] dark:text-[#2dd4bf] font-label-code text-[10.5px] font-semibold border border-[#0d9488]/20">
-									Gulf &amp; GCC Region
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">location_city</span>
+						<!-- Pillar 3: Gulf Regional Conglomerates -->
+						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#0d9488]/30 hover:border-[#0d9488]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+							<div>
+								<div class="flex items-center justify-between mb-4">
+									<span class="px-3 py-1 rounded-full bg-[#0d9488]/10 text-[#0d9488] dark:text-[#2dd4bf] font-mono text-[11px] font-semibold border border-[#0d9488]/20 flex items-center gap-1.5">
+										<span class="material-symbols-outlined text-[15px]">location_city</span>
+										<span>Gulf &amp; GCC Region</span>
+									</span>
+									<span class="font-mono text-[11px] text-outline">UAE &bull; Saudi Arabia</span>
+								</div>
+								<h3 class="font-display text-2xl text-on-surface font-medium mb-2.5">
+									Gulf Regional Conglomerates &amp; Holdings
+								</h3>
+								<p class="font-body text-[13px] text-on-surface-variant leading-relaxed mb-4">
+									Architected mission-critical web applications, commercial digital solutions, and scalable enterprise portals for major holding groups and established businesses across the UAE, Saudi Arabia, and the Gulf region.
+								</p>
 							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">Gulf Regional Conglomerates</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Architected mission-critical web applications, commercial digital solutions, and scalable enterprise portals for major holding groups and established businesses across the UAE, Saudi Arabia, and the Gulf region.
-							</p>
+							<div class="pt-4 border-t border-surface-container-high/60 font-mono text-[11px] text-outline flex items-center justify-between">
+								<span>Enterprise Portals &amp; Holding Groups</span>
+								<span class="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+							</div>
 						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>UAE, Saudi Arabia &amp; GCC</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
-						</div>
-					</div>
 
-					<!-- 5. UCEP -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#059669]/10 text-[#059669] dark:text-[#34d399] font-label-code text-[10.5px] font-semibold border border-[#059669]/20">
-									Education &amp; Social Impact
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">school</span>
+						<!-- Pillar 4: Social Impact & Research (UCEP & WasteSafe) -->
+						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#d97706]/30 hover:border-[#d97706]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+							<div>
+								<div class="flex items-center justify-between mb-4">
+									<span class="px-3 py-1 rounded-full bg-[#d97706]/10 text-[#d97706] dark:text-[#fbbf24] font-mono text-[11px] font-semibold border border-[#d97706]/20 flex items-center gap-1.5">
+										<span class="material-symbols-outlined text-[15px]">school</span>
+										<span>Education &amp; Research Impact</span>
+									</span>
+									<span class="font-mono text-[11px] text-outline">International</span>
+								</div>
+								<h3 class="font-display text-2xl text-on-surface font-medium mb-2.5">
+									UCEP &amp; WasteSafe International
+								</h3>
+								<p class="font-body text-[13px] text-on-surface-variant leading-relaxed mb-4">
+									Built institutional educational platforms empowering underprivileged youth with technical skills, alongside academic research dissemination portals for international environmental waste management conferences.
+								</p>
 							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">UCEP</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Built institutional digital infrastructure and educational platforms empowering underprivileged youth with technical skills, vocational learning, and employment pathways.
-							</p>
+							<div class="pt-4 border-t border-surface-container-high/60 font-mono text-[11px] text-outline flex items-center justify-between">
+								<span>Vocational Pathways &amp; Global Ecology</span>
+								<span class="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+							</div>
 						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>Underprivileged Children's Programs</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
-						</div>
-					</div>
 
-					<!-- 6. WasteSafe -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#d97706]/10 text-[#d97706] dark:text-[#fbbf24] font-label-code text-[10.5px] font-semibold border border-[#d97706]/20">
-									International Research
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">eco</span>
-							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">WasteSafe</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Engineered research dissemination portals, academic conference platforms, and digital tools for the International Conference on Solid and Hazardous Waste Management.
-							</p>
-						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-center justify-between">
-							<span>Environmental Research Consortium</span>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified</span>
-						</div>
-					</div>
-
-					<!-- 7. National Governments -->
-					<div class="p-7 rounded-2xl bg-surface-container-low/30 border border-outline-variant/40 hover:border-outline-variant/80 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-xs group sm:col-span-2 lg:col-span-3">
-						<div>
-							<div class="flex items-center justify-between mb-3.5">
-								<span class="px-2.5 py-0.5 rounded-full bg-[#7c3aed]/10 text-[#7c3aed] dark:text-[#c084fc] font-label-code text-[10.5px] font-semibold border border-[#7c3aed]/20">
-									Public Sector &amp; Ministries
-								</span>
-								<span class="material-symbols-outlined text-[19px] text-outline group-hover:text-primary-container transition-colors">account_balance</span>
-							</div>
-							<h3 class="font-display text-xl text-on-surface font-medium">Multiple National Governments</h3>
-							<p class="font-body-sm text-[12.5px] text-on-surface-variant mt-2 leading-relaxed">
-								Developed mission-critical government web portals, high-security public sector systems, and high-concurrency citizen-facing digital services across multiple countries, ensuring strict accessibility standards, data protection, and zero-downtime reliability.
-							</p>
-						</div>
-						<div class="pt-4 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-start sm:items-center justify-between gap-3">
-							<div class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 leading-relaxed">
-								<span class="inline-flex items-center gap-2"><span>Civil Portals</span> <span class="text-outline-variant/60">·</span></span>
-								<span class="inline-flex items-center gap-2"><span>National Ministries</span> <span class="text-outline-variant/60">·</span></span>
-								<span class="inline-flex items-center gap-2"><span>Public Digital Services</span> <span class="text-outline-variant/60">·</span></span>
-								<span>Strict Compliance &amp; Accessibility</span>
-							</div>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant shrink-0 mt-0.5 sm:mt-0" title="Verified Track Record">verified_user</span>
-						</div>
 					</div>
 
 				</div>
@@ -743,126 +844,195 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 6: LATEST DISPATCHES & WRITING
+		     SECTION 6: LATEST WRITING (WARM EDITORIAL MAGAZINE LAYOUT)
 		     ================================================================= -->
-		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-surface-container-low/20 border-b border-surface-container-high/60">
+		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-[#faf8f4] dark:bg-[#13141a] border-b border-surface-container-high/60">
 			<div class="max-w-6xl mx-auto flex flex-col gap-10">
 				
 				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
 					<div>
-						<div class="inline-flex items-center gap-2 font-label-code text-[11px] tracking-wider uppercase text-outline mb-1.5">
+						<div class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-outline mb-1.5">
 							<span class="w-1.5 h-1.5 bg-primary-container rounded-full"></span>
-							<span>Writing &amp; Notes</span>
+							<span>Editorial Journal &bull; Technical Dispatches</span>
 						</div>
 						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal">
-							Recent articles and thoughts.
+							Recent Articles &amp; Architectural Insights
 						</h2>
 					</div>
-					<a href="<?php echo esc_url( $articles_url ); ?>" class="font-label-code text-[11.5px] text-on-surface-variant hover:text-primary-container transition-colors inline-flex items-center gap-1.5 group pb-1">
-						<span>View all articles</span>
+					<a href="<?php echo esc_url( $articles_url ); ?>" class="font-mono text-[11.5px] text-on-surface-variant hover:text-primary-container transition-colors inline-flex items-center gap-1.5 group pb-1">
+						<span>Explore all articles</span>
 						<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
 					</a>
 				</div>
 
-				<!-- Dynamic Posts Query -->
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
-					<?php
-					$recent_posts = new WP_Query(
-						array(
-							'posts_per_page'         => 3,
-							'post_status'            => 'publish',
-							'ignore_sticky_posts'    => true,
-							'no_found_rows'          => true,
-							'update_post_meta_cache' => true,
-							'update_post_term_cache' => true,
-						)
-					);
+				<?php
+				$recent_posts = new WP_Query(
+					array(
+						'posts_per_page'         => 3,
+						'post_status'            => 'publish',
+						'ignore_sticky_posts'    => true,
+						'no_found_rows'          => true,
+						'update_post_meta_cache' => true,
+						'update_post_term_cache' => true,
+					)
+				);
 
-					if ( $recent_posts->have_posts() ) :
-						while ( $recent_posts->have_posts() ) :
-							$recent_posts->the_post();
-							$categories = get_the_category();
-							$cat_name   = ! empty( $categories ) ? $categories[0]->name : 'Engineering';
-							$read_time  = stitch_get_reading_time( get_the_ID() );
-							?>
-							<article class="bg-surface-container-lowest p-7 rounded-2xl border border-outline-variant/40 shadow-xs flex flex-col justify-between hover:border-outline-variant/80 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 group">
-								<div class="flex flex-col gap-3">
-									<div class="flex items-center justify-between font-label-code text-[11px] text-on-surface-variant">
-										<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium"><?php echo esc_html( $cat_name ); ?></span>
-										<span><?php echo esc_html( $read_time ); ?> MIN READ</span>
+				if ( $recent_posts->have_posts() ) :
+					$post_index = 0;
+					$lead_post  = null;
+					$sub_posts  = array();
+
+					while ( $recent_posts->have_posts() ) :
+						$recent_posts->the_post();
+						if ( 0 === $post_index ) {
+							$lead_post = array(
+								'id'        => get_the_ID(),
+								'title'     => get_the_title(),
+								'permalink' => get_permalink(),
+								'date'      => get_the_date( 'M j, Y' ),
+								'excerpt'   => get_the_excerpt(),
+								'read_time' => stitch_get_reading_time( get_the_ID() ),
+								'category'  => ( $c = get_the_category() ) ? $c[0]->name : 'Engineering',
+							);
+						} else {
+							$sub_posts[] = array(
+								'id'        => get_the_ID(),
+								'title'     => get_the_title(),
+								'permalink' => get_permalink(),
+								'date'      => get_the_date( 'M j, Y' ),
+								'excerpt'   => get_the_excerpt(),
+								'read_time' => stitch_get_reading_time( get_the_ID() ),
+								'category'  => ( $c = get_the_category() ) ? $c[0]->name : 'Engineering',
+							);
+						}
+						$post_index++;
+					endwhile;
+					wp_reset_postdata();
+					?>
+
+					<!-- Asymmetric Magazine Split Layout (7 cols Lead Story + 5 cols Stacked List) -->
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-7 items-stretch">
+						
+						<!-- Left Lead Editorial Essay (7 cols) -->
+						<?php if ( $lead_post ) : ?>
+							<article class="lg:col-span-7 bg-surface-container-lowest p-8 sm:p-10 rounded-3xl border border-outline-variant/50 shadow-sm hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+								<div>
+									<div class="flex items-center justify-between mb-4 font-mono text-[11px]">
+										<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold uppercase tracking-wider">
+											<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+											<span>Featured Lead Essay</span>
+										</span>
+										<span class="text-outline"><?php echo esc_html( $lead_post['read_time'] ); ?> MIN READ</span>
 									</div>
-									<h3 class="font-display text-xl text-on-surface group-hover:text-primary-container transition-colors line-clamp-2 leading-snug">
-										<a href="<?php the_permalink(); ?>">
-											<?php the_title(); ?>
+
+									<h3 class="font-display text-[26px] sm:text-[32px] text-on-surface font-normal leading-[1.18] tracking-tight mb-4 group-hover:text-primary transition-colors">
+										<a href="<?php echo esc_url( $lead_post['permalink'] ); ?>">
+											<?php echo esc_html( $lead_post['title'] ); ?>
 										</a>
 									</h3>
-									<p class="font-body-sm text-[13px] text-on-surface-variant line-clamp-3 leading-relaxed">
-										<?php echo esc_html( wp_trim_words( get_the_excerpt(), 18, '...' ) ); ?>
+
+									<p class="font-body text-[15px] text-on-surface-variant leading-relaxed mb-6">
+										<?php echo esc_html( wp_trim_words( $lead_post['excerpt'], 34, '...' ) ); ?>
 									</p>
 								</div>
-								<div class="pt-4 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-label-code text-[11px] text-outline">
-									<span><?php echo esc_html( get_the_date( 'M j, Y' ) ); ?></span>
-									<span class="text-on-surface group-hover:text-primary-container inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-all font-medium">
-										<span>Read Dispatch</span>
-										<span class="material-symbols-outlined text-[14px]">north_east</span>
-									</span>
+
+								<div class="pt-6 border-t border-surface-container-high/60 flex items-center justify-between font-mono text-[11.5px] text-outline">
+									<div class="flex items-center gap-3">
+										<span class="px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-medium"><?php echo esc_html( $lead_post['category'] ); ?></span>
+										<span><?php echo esc_html( $lead_post['date'] ); ?></span>
+									</div>
+									<a href="<?php echo esc_url( $lead_post['permalink'] ); ?>" class="inline-flex items-center gap-1.5 text-on-surface group-hover:text-primary font-semibold transition-colors">
+										<span>Read Full Essay</span>
+										<span class="material-symbols-outlined text-[15px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+									</a>
 								</div>
 							</article>
-							<?php
-						endwhile;
-						wp_reset_postdata();
-					else :
-						?>
-						<div class="col-span-full p-8 rounded-2xl bg-surface-container-lowest border border-dashed border-outline-variant/60 text-center flex flex-col items-center justify-center gap-2">
-							<span class="material-symbols-outlined text-[24px] text-outline">edit_note</span>
-							<h3 class="font-display text-lg text-on-surface">No dispatches published yet</h3>
-							<p class="font-body-sm text-[13px] text-on-surface-variant">
-								Publish your first post in WordPress to populate this feed.
-							</p>
+						<?php endif; ?>
+
+						<!-- Right Stacked Dispatch Feed (5 cols) -->
+						<div class="lg:col-span-5 flex flex-col gap-6">
+							<?php foreach ( $sub_posts as $sp ) : ?>
+								<article class="bg-surface-container-lowest p-7 rounded-3xl border border-outline-variant/50 shadow-2xs hover:shadow-card-soft hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between flex-1 group">
+									<div>
+										<div class="flex items-center justify-between mb-3 font-mono text-[11px] text-outline">
+											<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-medium"><?php echo esc_html( $sp['category'] ); ?></span>
+											<span><?php echo esc_html( $sp['read_time'] ); ?> MIN READ</span>
+										</div>
+
+										<h4 class="font-display text-xl text-on-surface group-hover:text-primary transition-colors line-clamp-2 leading-snug mb-2 font-medium">
+											<a href="<?php echo esc_url( $sp['permalink'] ); ?>">
+												<?php echo esc_html( $sp['title'] ); ?>
+											</a>
+										</h4>
+
+										<p class="font-body text-[13px] text-on-surface-variant line-clamp-2 leading-relaxed">
+											<?php echo esc_html( wp_trim_words( $sp['excerpt'], 18, '...' ) ); ?>
+										</p>
+									</div>
+
+									<div class="pt-4 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[11px] text-outline">
+										<span><?php echo esc_html( $sp['date'] ); ?></span>
+										<a href="<?php echo esc_url( $sp['permalink'] ); ?>" class="text-on-surface group-hover:text-primary inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform font-medium">
+											<span>Read Dispatch</span>
+											<span class="material-symbols-outlined text-[14px]">north_east</span>
+										</a>
+									</div>
+								</article>
+							<?php endforeach; ?>
 						</div>
-						<?php
-					endif;
-					?>
-				</div>
+
+					</div>
+				<?php else : ?>
+					<div class="p-8 rounded-3xl bg-surface-container-lowest border border-dashed border-outline-variant/60 text-center flex flex-col items-center justify-center gap-2">
+						<span class="material-symbols-outlined text-[24px] text-outline">edit_note</span>
+						<h3 class="font-display text-lg text-on-surface">No dispatches published yet</h3>
+					</div>
+				<?php endif; ?>
 
 			</div>
 		</section>
 
 		<!-- =================================================================
-		     SECTION 7: DIRECT ENGAGEMENT & DISPATCH CTA
+		     SECTION 7: DIRECT ENGAGEMENT (DEEP MIDNIGHT AURORA TERMINAL)
 		     ================================================================= -->
 		<section class="px-6 md:px-12 lg:px-16 py-20 md:py-28 bg-surface-container-lowest">
-			<div class="max-w-6xl mx-auto bg-gradient-to-br from-surface-container-low/50 via-surface-container-lowest to-surface-container-low/30 p-8 sm:p-12 md:p-16 rounded-3xl border border-outline-variant/50 shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+			<div class="max-w-6xl mx-auto relative bg-gradient-to-br from-[#090d16] via-[#0f172a] to-[#020617] text-white p-8 sm:p-12 md:p-16 rounded-3xl border border-indigo-500/20 shadow-2xl overflow-hidden">
 				
-				<div class="max-w-xl">
-					<div class="inline-flex items-center gap-2 font-label-code text-[11px] tracking-wider uppercase text-outline mb-2.5 font-medium">
-						<span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
-						<span><?php echo esc_html( $cta_eyebrow ); ?></span>
-					</div>
-					<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal mb-3 leading-snug">
-						<?php
-						$title_lines = explode( "\n", $cta_title );
-						if ( count( $title_lines ) > 1 ) :
-							echo esc_html( $title_lines[0] ) . '<br><span class="italic font-serif text-primary-container">' . esc_html( $title_lines[1] ) . '</span>';
-						else :
-							echo wp_kses_post( $cta_title );
-						endif;
-						?>
-					</h2>
-					<p class="font-body-sm text-[14px] text-on-surface-variant leading-relaxed">
-						<?php echo wp_kses_post( $cta_desc ); ?>
-					</p>
-				</div>
+				<!-- Ambient Aurora Glows -->
+				<div class="absolute -top-32 -right-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+				<div class="absolute -bottom-32 -left-32 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
 
-				<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 shrink-0 w-full sm:w-auto">
-					<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-on-surface text-surface hover:bg-primary-container hover:text-white font-body-sm font-medium shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all text-[14px] group">
-						<span>Start a Conversation</span>
-						<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
-					</a>
-					<button type="button" data-copy-email="<?php echo esc_attr( get_theme_mod( 'stitch_contact_email', 'wprashed@icloud.com' ) ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high font-label-code text-[12px] border border-outline-variant/40 transition-all cursor-pointer" title="Copy Email">
-						<span class="material-symbols-outlined text-[15px]">content_copy</span>
-						<span>Copy Email</span>
-					</button>
+				<div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
+					<div class="max-w-xl">
+						<div class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-emerald-400 mb-3 font-semibold">
+							<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]"></span>
+							<span>Direct Dispatch &bull; <?php echo esc_html( $cta_eyebrow ); ?></span>
+						</div>
+						<h2 class="font-display text-2xl sm:text-3xl lg:text-[40px] text-white font-normal mb-3.5 leading-[1.18] tracking-tight">
+							<?php
+							$title_lines = explode( "\n", $cta_title );
+							if ( count( $title_lines ) > 1 ) :
+								echo esc_html( $title_lines[0] ) . '<br><span class="italic font-serif text-emerald-400">' . esc_html( $title_lines[1] ) . '</span>';
+							else :
+								echo wp_kses_post( $cta_title );
+							endif;
+							?>
+						</h2>
+						<p class="font-body text-[15px] text-slate-300 leading-relaxed">
+							<?php echo wp_kses_post( $cta_desc ); ?>
+						</p>
+					</div>
+
+					<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 shrink-0 w-full sm:w-auto relative z-10">
+						<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-white text-[#090d16] hover:bg-emerald-400 hover:text-[#090d16] font-mono text-[13px] font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 transition-all group">
+							<span>Start a Conversation</span>
+							<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+						</a>
+						<button type="button" data-copy-email="<?php echo esc_attr( get_theme_mod( 'stitch_contact_email', 'wprashed@icloud.com' ) ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-mono text-[12px] border border-white/15 transition-all cursor-pointer backdrop-blur-md" title="Copy Email">
+							<span class="material-symbols-outlined text-[15px]">content_copy</span>
+							<span>Copy Email</span>
+						</button>
+					</div>
 				</div>
 
 			</div>
