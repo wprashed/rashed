@@ -73,7 +73,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const timeStr = formatter.format(now);
 
       clockEls.forEach((el) => {
-        el.textContent = `DHAKA UTC+6 · ${timeStr}`;
+        const mode = el.getAttribute('data-clock-mode');
+        if (mode === 'time-only') {
+          el.textContent = timeStr;
+        } else if (mode === 'short') {
+          el.textContent = `${timeStr} UTC+6`;
+        } else {
+          el.textContent = `DHAKA UTC+6 · ${timeStr}`;
+        }
       });
     } catch (e) {
       // Fallback
@@ -1084,4 +1091,224 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   initMathRendering();
+
+  // =========================================================================
+  // 14. Cursor Spotlight Tracking (Linear/Stripe Radial Illumination)
+  // =========================================================================
+  function initCursorSpotlight() {
+    const spotlightCards = document.querySelectorAll('.interactive-spotlight, [data-spotlight]');
+    if (!spotlightCards.length) return;
+
+    spotlightCards.forEach((card) => {
+      card.addEventListener('pointermove', function (e) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+
+      card.addEventListener('pointerleave', function () {
+        card.style.setProperty('--mouse-x', `-999px`);
+        card.style.setProperty('--mouse-y', `-999px`);
+      });
+    });
+  }
+
+  initCursorSpotlight();
+
+  // =========================================================================
+  // 15. 3D Kinetic Card Tilt (Smooth Micro-Perspective Lerp)
+  // =========================================================================
+  function init3DTilt() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    const tiltElements = document.querySelectorAll('[data-tilt]');
+    if (!tiltElements.length) return;
+
+    tiltElements.forEach((card) => {
+      let bounds = null;
+      let isHovering = false;
+      let reqId = null;
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+
+      function lerp(start, end, factor) {
+        return start + (end - start) * factor;
+      }
+
+      function update() {
+        if (!isHovering) {
+          currentX = lerp(currentX, 0, 0.12);
+          currentY = lerp(currentY, 0, 0.12);
+          if (Math.abs(currentX) < 0.005 && Math.abs(currentY) < 0.005) {
+            card.style.transform = '';
+            reqId = null;
+            return;
+          }
+        } else {
+          currentX = lerp(currentX, targetX, 0.15);
+          currentY = lerp(currentY, targetY, 0.15);
+        }
+
+        const maxTilt = parseFloat(card.getAttribute('data-tilt-max') || '5');
+        const rotateX = (-currentY * maxTilt).toFixed(2);
+        const rotateY = (currentX * maxTilt).toFixed(2);
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.012, 1.012, 1.012)`;
+
+        reqId = requestAnimationFrame(update);
+      }
+
+      card.addEventListener('mouseenter', () => {
+        bounds = card.getBoundingClientRect();
+        isHovering = true;
+        if (!reqId) reqId = requestAnimationFrame(update);
+      });
+
+      card.addEventListener('pointermove', (e) => {
+        if (!bounds) bounds = card.getBoundingClientRect();
+        const x = (e.clientX - bounds.left) / bounds.width;
+        const y = (e.clientY - bounds.top) / bounds.height;
+        targetX = (x - 0.5) * 2;
+        targetY = (y - 0.5) * 2;
+        if (!reqId) reqId = requestAnimationFrame(update);
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isHovering = false;
+      });
+    });
+  }
+
+  init3DTilt();
+
+  // =========================================================================
+  // 16. Viewport Animated Number Counter (Smooth Ease-Out Count Up)
+  // =========================================================================
+  function initCounterAnimation() {
+    const counters = document.querySelectorAll('[data-counter-target]');
+    if (!counters.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      counters.forEach((el) => {
+        const target = el.getAttribute('data-counter-target');
+        const prefix = el.getAttribute('data-counter-prefix') || '';
+        const suffix = el.getAttribute('data-counter-suffix') || '';
+        el.textContent = `${prefix}${target}${suffix}`;
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          observer.unobserve(el);
+
+          const target = parseFloat(el.getAttribute('data-counter-target'));
+          const prefix = el.getAttribute('data-counter-prefix') || '';
+          const suffix = el.getAttribute('data-counter-suffix') || '';
+          const duration = parseInt(el.getAttribute('data-counter-duration') || '1300', 10);
+          const startTime = performance.now();
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out exponential curve
+            const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            const currentVal = Math.floor(target * ease);
+
+            el.textContent = `${prefix}${currentVal}${progress === 1 ? suffix : ''}`;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              el.textContent = `${prefix}${target}${suffix}`;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    counters.forEach((c) => observer.observe(c));
+  }
+
+  initCounterAnimation();
+
+  // =========================================================================
+  // 17. Magnetic Button Micro-Pull
+  // =========================================================================
+  function initMagneticButtons() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+    const btns = document.querySelectorAll('.btn-magnetic');
+    if (!btns.length) return;
+
+    btns.forEach((btn) => {
+      btn.addEventListener('pointermove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const pullX = (x * 0.18).toFixed(1);
+        const pullY = (y * 0.18).toFixed(1);
+        btn.style.transform = `translate(${pullX}px, ${pullY}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+        btn.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1)';
+        setTimeout(() => {
+          btn.style.transition = '';
+        }, 350);
+      });
+    });
+  }
+
+  initMagneticButtons();
+
+  // =========================================================================
+  // 18. Interactive Repository Category Filter Console
+  // =========================================================================
+  function initRepoFilter() {
+    const filterBar = document.getElementById('repo-filter-bar');
+    if (!filterBar) return;
+
+    const filterBtns = filterBar.querySelectorAll('.repo-filter-btn');
+    const repoCards = document.querySelectorAll('.repo-card-item');
+    if (!filterBtns.length || !repoCards.length) return;
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const filter = this.getAttribute('data-filter') || 'all';
+
+        // Update active button styles
+        filterBtns.forEach((b) => {
+          b.classList.remove('active', 'bg-white', 'text-slate-900', 'shadow-sm');
+          b.classList.add('bg-white/[0.06]', 'text-slate-300');
+        });
+        this.classList.add('active', 'bg-white', 'text-slate-900', 'shadow-sm');
+        this.classList.remove('bg-white/[0.06]', 'text-slate-300');
+
+        // Filter cards
+        repoCards.forEach((card) => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category === filter || category.includes(filter)) {
+            card.classList.remove('repo-hidden');
+            card.style.display = '';
+          } else {
+            card.classList.add('repo-hidden');
+            setTimeout(() => {
+              if (card.classList.contains('repo-hidden')) {
+                card.style.display = 'none';
+              }
+            }, 200);
+          }
+        });
+      });
+    });
+  }
+
+  initRepoFilter();
 });

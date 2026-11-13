@@ -194,14 +194,14 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 				<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
 					
 					<!-- FLAGSHIP HERO BANNER (12 COLS): Sovereign Governments & Public Sector -->
-					<div class="md:col-span-12 relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#090d16] via-[#10172a] to-[#1e1b4b] text-white p-8 sm:p-10 border border-white/10 shadow-xl group">
+					<div class="interactive-spotlight interactive-spotlight-purple md:col-span-12 relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#090d16] via-[#10172a] to-[#1e1b4b] text-white p-8 sm:p-10 border border-white/10 shadow-xl group" data-tilt data-tilt-max="3">
 						<!-- Ambient Glow -->
 						<div class="pointer-events-none absolute top-0 right-0 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
 						
 						<div class="relative z-10 flex flex-col justify-between h-full gap-6">
 							<div>
 								<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-									<span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-label-code text-[11px] font-semibold tracking-wider uppercase">
+									<span class="px-3.5 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-label-code text-[11px] font-semibold tracking-wider uppercase">
 										Sovereign Governments &amp; Public Sector
 									</span>
 									<span class="material-symbols-outlined text-white/50 text-[26px]">account_balance</span>
@@ -216,14 +216,19 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 							</div>
 
 							<!-- Telemetry Pills Strip -->
-							<div class="pt-5 border-t border-white/10 flex flex-wrap items-center gap-x-4 gap-y-2 font-label-code text-[11.5px] text-white/70">
-								<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Civil Portals</span>
-								<span class="text-white/30">&bull;</span>
-								<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> National Ministries</span>
-								<span class="text-white/30">&bull;</span>
-								<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Public Digital Services</span>
-								<span class="text-white/30">&bull;</span>
-								<span class="inline-flex items-center gap-1.5 text-white/90 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strict Compliance &amp; Accessibility</span>
+							<div class="pt-5 border-t border-white/10 flex flex-wrap items-center gap-2 font-mono text-[11px] text-white/80">
+								<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white font-medium flex items-center gap-1.5 shadow-2xs">
+									<span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Civil Portals
+								</span>
+								<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white font-medium flex items-center gap-1.5 shadow-2xs">
+									<span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> National Ministries
+								</span>
+								<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white font-medium flex items-center gap-1.5 shadow-2xs">
+									<span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Public Digital Services
+								</span>
+								<span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-medium flex items-center gap-1.5 shadow-2xs">
+									<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strict Compliance &amp; Accessibility
+								</span>
 							</div>
 						</div>
 					</div>

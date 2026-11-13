@@ -4,7 +4,7 @@ Theme URI: https://github.com/wprashed/rashed
 Author: Rashed Hossain
 Author URI: https://rashed.im
 Description: A precision Swiss architectural editorial portfolio and blog theme crafted for Rashed Hossain. Features interactive WebGL fluid shader canvas animations, live Dhaka UTC+6 telemetry, 3D kinetic card interactions, dynamic articles and open-source contribution showcases, and a built-in direct inquiry dispatch system saving contact form data on the website with an admin dashboard.
-Version: 1.0.6
+Version: 1.0.7
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 8.0
@@ -1469,3 +1469,78 @@ html.dark .comment-form button[type="submit"]:hover {
   background-color: var(--color-primary);
   color: #ffffff;
 }
+
+/* ==========================================================================
+   Tactile & Kinetic Micro-Interactions (Spotlight, Tilt, Magnetic, Filters)
+   ========================================================================== */
+.interactive-spotlight {
+  position: relative;
+}
+
+.interactive-spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    450px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(56, 189, 248, 0.16),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.interactive-spotlight:hover::before {
+  opacity: 1;
+}
+
+.interactive-spotlight-emerald::before {
+  background: radial-gradient(
+    450px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(52, 211, 153, 0.18),
+    transparent 65%
+  );
+}
+
+.interactive-spotlight-indigo::before {
+  background: radial-gradient(
+    500px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(129, 140, 248, 0.2),
+    transparent 65%
+  );
+}
+
+.interactive-spotlight-purple::before {
+  background: radial-gradient(
+    450px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(192, 132, 252, 0.18),
+    transparent 65%
+  );
+}
+
+/* 3D Tilt Element */
+[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Magnetic Button micro-pull */
+.btn-magnetic {
+  will-change: transform;
+  display: inline-flex;
+}
+
+/* Repository Filter Transition */
+.repo-card-item {
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.repo-card-item.repo-hidden {
+  opacity: 0;
+  transform: scale(0.97) translateY(8px);
+  pointer-events: none;
+}
+

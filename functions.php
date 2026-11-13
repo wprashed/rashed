@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'STITCH_VERSION', '1.0.6' );
+define( 'STITCH_VERSION', '1.0.7' );
 
 /**
  * Theme Setup

@@ -47,7 +47,8 @@ $rss_url       = get_feed_link();
 
 					<p class="font-label-code text-[12px] text-on-surface-variant flex items-center gap-2">
 						<span class="material-symbols-outlined text-[15px] text-primary-container">location_on</span>
-						<span><?php echo esc_html( $status_line ); ?></span>
+						<span>Dhaka, Bangladesh &bull;</span>
+						<span class="live-dhaka-clock text-emerald-600 dark:text-emerald-400 font-mono font-semibold" data-clock-mode="short">UTC+6</span>
 					</p>
 
 					<!-- Direct Email Action Chip -->

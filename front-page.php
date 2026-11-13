@@ -68,7 +68,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 			<div class="pointer-events-none absolute top-6 right-8 lg:right-12 font-mono text-[10px] text-outline-variant/40 tracking-widest hidden md:flex items-center gap-3 select-none">
 				<span>DHAKA // 23.8103°N 90.4125°E</span>
 				<span class="text-outline-variant/30">&bull;</span>
-				<span>UTC+6</span>
+				<span class="live-dhaka-clock" data-clock-mode="short">UTC+6</span>
 				<span class="text-outline-variant/30">&bull;</span>
 				<span>CORE: 6.9 &bull; 7.0 &bull; 7.1</span>
 			</div>
@@ -123,11 +123,11 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 
 					<!-- High-Impact Action Controls -->
 					<div class="flex flex-wrap items-center gap-3.5 pt-1">
-						<a href="<?php echo esc_url( $contrib_url ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-on-surface text-surface hover:bg-primary-container hover:text-white font-body-sm font-semibold transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 group text-[13.5px]">
+						<a href="<?php echo esc_url( $contrib_url ); ?>" class="btn-magnetic inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-on-surface text-surface hover:bg-primary-container hover:text-white font-body-sm font-semibold transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 group text-[13.5px]">
 							<span>View Contributions</span>
 							<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
 						</a>
-						<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm font-medium border border-outline-variant/50 hover:border-outline-variant transition-all text-[13.5px]">
+						<a href="<?php echo esc_url( $contact_url ); ?>" class="btn-magnetic inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm font-medium border border-outline-variant/50 hover:border-outline-variant transition-all text-[13.5px]">
 							<span>Get in Touch</span>
 							<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 						</a>
@@ -159,11 +159,11 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 							</span>
 							<span class="font-medium text-white/90">Dhaka, BD</span>
 							<span class="text-white/30">&bull;</span>
-							<span class="text-emerald-400 font-mono text-[10px]">UTC+6</span>
+							<span class="live-dhaka-clock text-emerald-400 font-mono text-[10px]" data-clock-mode="time-only">UTC+6</span>
 						</div>
 
 						<!-- Main Glassmorphism Portrait Frame -->
-						<div class="relative bg-gradient-to-b from-surface-container-lowest via-surface-container-lowest to-surface-container-low/40 p-3.5 sm:p-4 rounded-3xl shadow-card-soft border border-outline-variant/60 hover:border-outline-variant/90 transition-all duration-500 group">
+						<div class="relative bg-gradient-to-b from-surface-container-lowest via-surface-container-lowest to-surface-container-low/40 p-3.5 sm:p-4 rounded-3xl shadow-card-soft border border-outline-variant/60 hover:border-outline-variant/90 transition-all duration-500 group" data-tilt data-tilt-max="4">
 							
 							<!-- Corner Crosshairs -->
 							<span class="absolute top-2.5 left-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
@@ -233,7 +233,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
 						
 						<!-- Metric 1: Millions -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+						<div class="interactive-spotlight interactive-spotlight-emerald p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
 							<div class="absolute top-0 left-0 right-0 h-[2px] bg-emerald-500 opacity-60"></div>
 							<div>
 								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
@@ -253,14 +253,14 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Metric 2: 60+ Plugins -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+						<div class="interactive-spotlight p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
 							<div class="absolute top-0 left-0 right-0 h-[2px] bg-blue-500 opacity-60"></div>
 							<div>
 								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
 									<span class="font-medium tracking-wider">02 // PLUGINS</span>
 									<span class="material-symbols-outlined text-[15px] text-blue-400">extension</span>
 								</div>
-								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5" data-counter-target="60" data-counter-suffix="+">
 									<?php echo esc_html( $m2_val ); ?>
 								</div>
 								<h3 class="font-mono text-[13px] font-semibold text-blue-400 uppercase tracking-wide">
@@ -273,14 +273,14 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Metric 3: 3 Core Releases -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+						<div class="interactive-spotlight interactive-spotlight-purple p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
 							<div class="absolute top-0 left-0 right-0 h-[2px] bg-purple-500 opacity-60"></div>
 							<div>
 								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
 									<span class="font-medium tracking-wider">03 // UPSTREAM</span>
 									<span class="material-symbols-outlined text-[15px] text-purple-400">deployed_code</span>
 								</div>
-								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5" data-counter-target="3">
 									<?php echo esc_html( $m3_val ); ?>
 								</div>
 								<h3 class="font-mono text-[13px] font-semibold text-purple-400 uppercase tracking-wide">
@@ -293,14 +293,14 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Metric 4: 11 Verified Badges -->
-						<div class="p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
+						<div class="interactive-spotlight p-7 lg:p-8 flex flex-col justify-between hover:bg-white/[0.04] transition-colors group relative">
 							<div class="absolute top-0 left-0 right-0 h-[2px] bg-amber-500 opacity-60"></div>
 							<div>
 								<div class="flex items-center justify-between font-mono text-[10.5px] text-slate-400 mb-4">
 									<span class="font-medium tracking-wider">04 // RECOGNITION</span>
 									<span class="material-symbols-outlined text-[15px] text-amber-400">verified</span>
 								</div>
-								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5">
+								<div class="font-display text-[48px] sm:text-[54px] text-white font-light tracking-tight leading-none mb-2.5" data-counter-target="11">
 									<?php echo esc_html( $m4_val ); ?>
 								</div>
 								<h3 class="font-mono text-[13px] font-semibold text-amber-400 uppercase tracking-wide">
@@ -512,11 +512,27 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</div>
 				</div>
 
+				<!-- Interactive Repository Category Filter Bar -->
+				<div class="flex flex-wrap items-center gap-2 -mt-4 mb-2" id="repo-filter-bar">
+					<button type="button" class="repo-filter-btn px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-200 bg-white text-slate-900 shadow-sm border border-white" data-filter="all">
+						All Repositories (6)
+					</button>
+					<button type="button" class="repo-filter-btn px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-200 bg-white/[0.06] text-slate-300 hover:text-white border border-white/10 hover:border-white/20" data-filter="core">
+						Core Architecture
+					</button>
+					<button type="button" class="repo-filter-btn px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-200 bg-white/[0.06] text-slate-300 hover:text-white border border-white/10 hover:border-white/20" data-filter="performance">
+						Performance &amp; WASM
+					</button>
+					<button type="button" class="repo-filter-btn px-4 py-1.5 rounded-full text-xs font-mono font-medium transition-all duration-200 bg-white/[0.06] text-slate-300 hover:text-white border border-white/10 hover:border-white/20" data-filter="ecosystem">
+						Ecosystem &amp; LMS
+					</button>
+				</div>
+
 				<!-- Dual-Hero Flagship Showcases (High-Contrast Glassmorphic Terminals) -->
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					
 					<!-- Flagship 1: WordPress Core -->
-					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-[#38bdf8]/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden">
+					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-[#38bdf8]/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden" data-category="core" data-tilt data-tilt-max="3">
 						<!-- Ambient Corner Glow -->
 						<div class="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
 						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0073aa] via-[#38bdf8] to-transparent"></div>
@@ -585,7 +601,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</a>
 
 					<!-- Flagship 2: Performance Suite -->
-					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-emerald-400/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden">
+					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight interactive-spotlight-emerald group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-emerald-400/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden" data-category="performance" data-tilt data-tilt-max="3">
 						<!-- Ambient Corner Glow -->
 						<div class="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
 						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-400 to-transparent"></div>
@@ -659,7 +675,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 					
 					<!-- Deck Card 1: Gutenberg & DataViews (Purple Accent) -->
-					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-purple-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
+					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight interactive-spotlight-purple group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-purple-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between" data-category="core" data-tilt data-tilt-max="2.5">
 						<div>
 							<div class="flex items-center justify-between mb-3.5">
 								<span class="font-mono text-[10px] text-purple-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30">BLOCK EDITOR</span>
@@ -679,7 +695,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</a>
 
 					<!-- Deck Card 2: WordPress AI & Playground (Cyan Accent) -->
-					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
+					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between" data-category="performance" data-tilt data-tilt-max="2.5">
 						<div>
 							<div class="flex items-center justify-between mb-3.5">
 								<span class="font-mono text-[10px] text-cyan-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/30">AI &amp; WASM</span>
@@ -699,7 +715,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</a>
 
 					<!-- Deck Card 3: WP-CLI & Config Tools (Amber Accent) -->
-					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
+					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between" data-category="core" data-tilt data-tilt-max="2.5">
 						<div>
 							<div class="flex items-center justify-between mb-3.5">
 								<span class="font-mono text-[10px] text-amber-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/30">CLI TOOLING</span>
@@ -719,7 +735,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</a>
 
 					<!-- Deck Card 4: Tutor LMS Platform (Emerald Accent) -->
-					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
+					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="repo-card-item interactive-spotlight interactive-spotlight-emerald group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between" data-category="ecosystem" data-tilt data-tilt-max="2.5">
 						<div>
 							<div class="flex items-center justify-between mb-3.5">
 								<span class="font-mono text-[10px] text-emerald-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/30">100K+ SITES</span>
@@ -793,18 +809,18 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 				<div class="flex flex-col gap-6">
 					
 					<!-- Top Hero Bento Card: Multiple National Governments -->
-					<div class="relative bg-gradient-to-br from-[#090d16] via-[#1e1b4b] to-[#0f172a] text-white p-8 sm:p-10 md:p-12 rounded-3xl border border-indigo-500/30 shadow-xl overflow-hidden group">
+					<div class="interactive-spotlight interactive-spotlight-indigo relative bg-gradient-to-br from-[#090d16] via-[#1e1b4b] to-[#0f172a] text-white p-7 sm:p-10 md:p-12 rounded-3xl border border-indigo-500/30 shadow-xl overflow-hidden group" data-tilt data-tilt-max="3">
 						<div class="absolute -top-24 -right-24 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
 						<div class="relative z-10 flex flex-col justify-between h-full">
 							<div>
 								<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-									<span class="px-3.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 flex items-center gap-1.5">
+									<span class="px-3.5 py-1 rounded-full bg-indigo-500/20 text-indigo-300 font-mono text-[11px] font-semibold border border-indigo-500/30 flex items-center gap-1.5 shadow-xs">
 										<span class="material-symbols-outlined text-[15px]">account_balance</span>
 										<span>Sovereign Digital Services &bull; Public Sector</span>
 									</span>
-									<span class="font-mono text-[11px] text-indigo-200/70 flex items-center gap-1.5">
+									<span class="font-mono text-[11px] text-indigo-200/80 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.06] border border-white/10">
 										<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-										<span>Zero-Downtime Architecture</span>
+										<span>Zero-Downtime High Concurrency</span>
 									</span>
 								</div>
 
@@ -812,19 +828,27 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 									Multiple National Governments
 								</h3>
 
-								<p class="font-body text-[14.5px] text-indigo-100/80 max-w-3xl leading-relaxed mb-6">
+								<p class="font-body text-[14.5px] text-indigo-100/90 max-w-3xl leading-relaxed mb-6">
 									Developed mission-critical government web portals, high-security public sector systems, and high-concurrency citizen-facing digital services across multiple countries, ensuring strict accessibility standards, data protection, and zero-downtime reliability.
 								</p>
 							</div>
 
-							<div class="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11.5px] text-indigo-200/80">
-								<div class="flex flex-wrap items-center gap-x-3 gap-y-1.5">
-									<span class="inline-flex items-center gap-2"><span>Civil Portals</span> <span class="text-white/30">&bull;</span></span>
-									<span class="inline-flex items-center gap-2"><span>National Ministries</span> <span class="text-white/30">&bull;</span></span>
-									<span class="inline-flex items-center gap-2"><span>Public Digital Services</span> <span class="text-white/30">&bull;</span></span>
-									<span>Strict Compliance &amp; WCAG AAA</span>
+							<div class="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-[11.5px] text-indigo-200/90">
+								<div class="flex flex-wrap items-center gap-2">
+									<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] font-medium flex items-center gap-1.5 shadow-2xs">
+										<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Civil Portals
+									</span>
+									<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] font-medium flex items-center gap-1.5 shadow-2xs">
+										<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> National Ministries
+									</span>
+									<span class="px-3 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] font-medium flex items-center gap-1.5 shadow-2xs">
+										<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Public Digital Services
+									</span>
+									<span class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[11px] font-medium flex items-center gap-1.5 shadow-2xs">
+										<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strict Compliance &amp; WCAG AAA
+									</span>
 								</div>
-								<div class="flex items-center gap-1.5 text-emerald-400 shrink-0 font-semibold">
+								<div class="flex items-center gap-1.5 text-emerald-400 shrink-0 font-semibold px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
 									<span class="material-symbols-outlined text-[16px]">verified_user</span>
 									<span>Verified Sovereign Track Record</span>
 								</div>
@@ -836,7 +860,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						
 						<!-- Pillar 1: UN Agencies (UNICEF & ILO) -->
-						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#1cabe2]/30 hover:border-[#1cabe2]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+						<div class="interactive-spotlight p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#1cabe2]/30 hover:border-[#1cabe2]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group" data-tilt data-tilt-max="2.5">
 							<div>
 								<div class="flex items-center justify-between mb-4">
 									<span class="px-3 py-1 rounded-full bg-[#1cabe2]/10 text-[#1cabe2] dark:text-[#38bdf8] font-mono text-[11px] font-semibold border border-[#1cabe2]/20 flex items-center gap-1.5">
@@ -859,7 +883,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Pillar 2: Leading US Enterprises -->
-						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#2563eb]/30 hover:border-[#2563eb]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+						<div class="interactive-spotlight p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#2563eb]/30 hover:border-[#2563eb]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group" data-tilt data-tilt-max="2.5">
 							<div>
 								<div class="flex items-center justify-between mb-4">
 									<span class="px-3 py-1 rounded-full bg-[#2563eb]/10 text-[#2563eb] dark:text-[#60a5fa] font-mono text-[11px] font-semibold border border-[#2563eb]/20 flex items-center gap-1.5">
@@ -882,7 +906,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Pillar 3: Gulf Regional Conglomerates -->
-						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#0d9488]/30 hover:border-[#0d9488]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+						<div class="interactive-spotlight p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#0d9488]/30 hover:border-[#0d9488]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group" data-tilt data-tilt-max="2.5">
 							<div>
 								<div class="flex items-center justify-between mb-4">
 									<span class="px-3 py-1 rounded-full bg-[#0d9488]/10 text-[#0d9488] dark:text-[#2dd4bf] font-mono text-[11px] font-semibold border border-[#0d9488]/20 flex items-center gap-1.5">
@@ -905,7 +929,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 						</div>
 
 						<!-- Pillar 4: Social Impact & Research (UCEP & WasteSafe) -->
-						<div class="p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#d97706]/30 hover:border-[#d97706]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group">
+						<div class="interactive-spotlight p-8 rounded-3xl bg-surface-container-low/40 hover:bg-surface-container-lowest border border-[#d97706]/30 hover:border-[#d97706]/60 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 flex flex-col justify-between shadow-2xs group" data-tilt data-tilt-max="2.5">
 							<div>
 								<div class="flex items-center justify-between mb-4">
 									<span class="px-3 py-1 rounded-full bg-[#d97706]/10 text-[#d97706] dark:text-[#fbbf24] font-mono text-[11px] font-semibold border border-[#d97706]/20 flex items-center gap-1.5">
