@@ -146,7 +146,7 @@ $categories  = get_categories( array( 'hide_empty' => true ) );
 				$feat_cat_name = ! empty( $feat_cats ) ? $feat_cats[0]->name : 'Core Architecture';
 				$feat_time     = stitch_get_reading_time( $featured_id );
 				?>
-				<section id="featured-lead-section" class="px-6 md:px-12 py-10 bg-surface-container-low/40 border-b border-surface-container-high/60">
+				<section id="featured-lead-section" class="px-6 md:px-12 py-12 bg-[#faf8f4] dark:bg-[#12131a] border-b border-surface-container-high/60">
 					<div class="max-w-5xl mx-auto relative bg-surface-container-lowest rounded-3xl shadow-xs hover:border-outline-variant/80 transition-all duration-300 overflow-hidden border border-outline-variant/50 group">
 						
 						<!-- Architectural registration crosshairs -->
