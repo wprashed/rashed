@@ -315,17 +315,14 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 								Developed secure, accessible, high-traffic government portals and civic digital platforms across multiple nations, complying with rigorous national security, privacy, and accessibility standards.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex flex-wrap items-center justify-between gap-2">
-							<div class="flex items-center gap-3">
-								<span>National Ministries</span>
-								<span>·</span>
-								<span>Citizen Portals</span>
-								<span>·</span>
-								<span>High-Availability Systems</span>
-								<span>·</span>
+						<div class="pt-3.5 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-start sm:items-center justify-between gap-3">
+							<div class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 leading-relaxed">
+								<span class="inline-flex items-center gap-2"><span>National Ministries</span> <span class="text-outline-variant/60">·</span></span>
+								<span class="inline-flex items-center gap-2"><span>Citizen Portals</span> <span class="text-outline-variant/60">·</span></span>
+								<span class="inline-flex items-center gap-2"><span>High-Availability Systems</span> <span class="text-outline-variant/60">·</span></span>
 								<span>Strict Compliance &amp; Accessibility</span>
 							</div>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified_user</span>
+							<span class="material-symbols-outlined text-[14px] text-outline-variant shrink-0 mt-0.5 sm:mt-0" title="Verified Track Record">verified_user</span>
 						</div>
 					</div>
 

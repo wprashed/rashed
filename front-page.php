@@ -706,17 +706,14 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 								Developed mission-critical government web portals, high-security public sector systems, and high-concurrency citizen-facing digital services across multiple countries, ensuring strict accessibility standards, data protection, and zero-downtime reliability.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex flex-wrap items-center justify-between gap-2">
-							<div class="flex items-center gap-3">
-								<span>Civil Portals</span>
-								<span>·</span>
-								<span>National Ministries</span>
-								<span>·</span>
-								<span>Public Digital Services</span>
-								<span>·</span>
+						<div class="pt-3.5 mt-5 border-t border-surface-container-high/50 font-label-code text-[11px] text-outline flex items-start sm:items-center justify-between gap-3">
+							<div class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 leading-relaxed">
+								<span class="inline-flex items-center gap-2"><span>Civil Portals</span> <span class="text-outline-variant/60">·</span></span>
+								<span class="inline-flex items-center gap-2"><span>National Ministries</span> <span class="text-outline-variant/60">·</span></span>
+								<span class="inline-flex items-center gap-2"><span>Public Digital Services</span> <span class="text-outline-variant/60">·</span></span>
 								<span>Strict Compliance &amp; Accessibility</span>
 							</div>
-							<span class="material-symbols-outlined text-[14px] text-outline-variant">verified_user</span>
+							<span class="material-symbols-outlined text-[14px] text-outline-variant shrink-0 mt-0.5 sm:mt-0" title="Verified Track Record">verified_user</span>
 						</div>
 					</div>
 
