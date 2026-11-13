@@ -57,55 +57,82 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 	<div class="flex flex-col w-full">
 
 		<!-- =================================================================
-		     SECTION 1: HERO & ARCHITECTURAL IDENTITY
+		     SECTION 1: HERO & ARCHITECTURAL IDENTITY (PRECISION EDITORIAL & TELEMETRY)
 		     ================================================================= -->
-		<section class="relative px-6 md:px-12 lg:px-16 pt-12 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-28 bg-surface-container-lowest overflow-hidden border-b border-surface-container-high/60">
-			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
+		<section class="relative px-6 md:px-12 lg:px-16 pt-14 pb-18 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-surface-container-lowest overflow-hidden border-b border-surface-container-high/60">
+			<!-- Atmospheric Subtle Background Glows -->
+			<div class="pointer-events-none absolute -top-32 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-primary/10 via-indigo-500/5 to-transparent rounded-full blur-3xl opacity-70"></div>
+			<div class="pointer-events-none absolute top-1/2 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl opacity-50"></div>
+
+			<!-- Architectural Watermark (Coordinates) -->
+			<div class="pointer-events-none absolute top-6 right-8 lg:right-12 font-mono text-[10px] text-outline-variant/40 tracking-widest hidden md:flex items-center gap-3 select-none">
+				<span>DHAKA // 23.8103°N 90.4125°E</span>
+				<span class="text-outline-variant/30">&bull;</span>
+				<span>UTC+6</span>
+				<span class="text-outline-variant/30">&bull;</span>
+				<span>CORE: 6.9 &bull; 7.0 &bull; 7.1</span>
+			</div>
+
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto relative z-10">
 				
 				<!-- Left Editorial Column -->
 				<div class="lg:col-span-7 flex flex-col gap-6">
 					
-					<!-- Minimal Category Eyebrow -->
-					<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container/80 text-on-surface font-label-code text-[11px] uppercase tracking-wider border border-outline-variant/40 self-start shadow-xs">
-						<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-						<span><?php echo esc_html( $hero_eyebrow ); ?></span>
+					<!-- Live Availability & Capability Eyebrow -->
+					<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container/70 backdrop-blur-md text-on-surface font-label-code text-[11px] uppercase tracking-wider border border-outline-variant/50 self-start shadow-xs">
+						<span class="flex h-2 w-2 relative">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+						</span>
+						<span class="font-semibold"><?php echo esc_html( $hero_eyebrow ); ?></span>
+						<span class="text-outline-variant/60 hidden sm:inline">&bull;</span>
+						<span class="text-emerald-700 dark:text-emerald-400 font-semibold hidden sm:inline">Active</span>
 					</div>
 
-					<!-- Primary Headline -->
-					<h1 class="font-display text-[42px] sm:text-[52px] lg:text-[60px] text-on-surface leading-[1.08] tracking-[-0.03em] font-normal">
+					<!-- Primary Headline with High-Contrast Editorial Styling -->
+					<h1 class="font-display text-[42px] sm:text-[54px] lg:text-[62px] text-on-surface leading-[1.06] tracking-[-0.035em] font-normal">
 						<?php echo wp_kses_post( $hero_title ); ?>
 					</h1>
 
-					<!-- Narrative Bio -->
-					<div class="font-body-md text-[16px] sm:text-[17.5px] text-on-surface-variant leading-relaxed max-w-2xl font-normal">
-						<?php echo wp_kses_post( $hero_bio ); ?>
+					<!-- Narrative Bio with Typographic Finesse -->
+					<p class="font-body-md text-[16px] sm:text-[17.5px] text-on-surface-variant leading-relaxed max-w-2xl font-light">
+						Over a decade building and scaling for the open web. Tech Support Lead at <strong class="text-on-surface font-semibold">Ollyo &amp; Themeum</strong> (Tutor LMS), specializing in <strong class="text-on-surface font-semibold">AI systems, workflow automation, product management, and data analysis</strong>. Contributing upstream to WordPress Core and architecting solutions that empower millions worldwide.
+					</p>
+
+					<!-- Tactile Engineering Focus Dossier (Replaces disconnected chips) -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 p-2 bg-surface-container-low/60 rounded-2xl border border-outline-variant/40 max-w-2xl">
+						<div class="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+							<span class="font-label-code text-[10px] uppercase text-outline font-semibold tracking-wider flex items-center gap-1.5">
+								<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> AI &amp; Automation
+							</span>
+							<span class="font-display text-[13px] text-on-surface font-medium mt-1">Autonomous Workflows</span>
+						</div>
+						<div class="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+							<span class="font-label-code text-[10px] uppercase text-outline font-semibold tracking-wider flex items-center gap-1.5">
+								<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Product &amp; Data
+							</span>
+							<span class="font-display text-[13px] text-on-surface font-medium mt-1">Scale Telemetry</span>
+						</div>
+						<div class="px-3.5 py-2.5 rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+							<span class="font-label-code text-[10px] uppercase text-outline font-semibold tracking-wider flex items-center gap-1.5">
+								<span class="w-1.5 h-1.5 rounded-full bg-[#0073aa]"></span> Open Web
+							</span>
+							<span class="font-display text-[13px] text-on-surface font-medium mt-1">10+ Years Upstream</span>
+						</div>
 					</div>
 
-					<!-- Capabilities & Focus Vectors -->
-					<div class="flex flex-wrap items-center gap-2.5 pt-1 font-label-code text-[11.5px]">
-						<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface font-medium border border-outline-variant/40 transition-colors">
-							<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-							<span>AI &amp; Workflow Automation</span>
-						</span>
-						<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface font-medium border border-outline-variant/40 transition-colors">
-							<span>Product Management &amp; Data Analysis</span>
-						</span>
-						<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-container/10 hover:bg-primary-container/15 text-primary-container font-medium border border-primary-container/20 transition-colors">
-							<span>10+ Years Open Web</span>
-						</span>
-					</div>
-
-					<!-- Minimal Actions -->
-					<div class="flex flex-wrap items-center gap-3.5 pt-2">
-						<a href="<?php echo esc_url( $contrib_url ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-on-surface text-surface hover:bg-primary-container hover:text-white font-body-sm font-medium transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 group text-[13.5px]">
+					<!-- High-Impact Action Controls -->
+					<div class="flex flex-wrap items-center gap-3.5 pt-1">
+						<a href="<?php echo esc_url( $contrib_url ); ?>" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-on-surface text-surface hover:bg-primary-container hover:text-white font-body-sm font-semibold transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 group text-[13.5px]">
 							<span>View Contributions</span>
 							<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
 						</a>
-						<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm font-medium border border-outline-variant/50 hover:border-outline-variant transition-all text-[13.5px]">
+						<a href="<?php echo esc_url( $contact_url ); ?>" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm font-medium border border-outline-variant/50 hover:border-outline-variant transition-all text-[13.5px]">
 							<span>Get in Touch</span>
 							<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 						</a>
-						<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-3.5 text-on-surface-variant hover:text-on-surface font-label-code text-[12px] transition-colors">
+						<a href="<?php echo esc_url( $wporg_url ); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-3 rounded-full bg-surface-container/60 hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-label-code text-[12px] border border-outline-variant/30 transition-all">
+							<svg class="w-3.5 h-3.5 text-[#0073aa]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0zm0 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11"/></svg>
 							<span>.org/wprashed</span>
 							<span class="material-symbols-outlined text-[14px]">north_east</span>
 						</a>
@@ -113,34 +140,60 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 
 				</div>
 
-				<!-- Right Architectural Portrait Plate -->
+				<!-- Right Architectural Portrait Plate with Floating Telemetry Satellites -->
 				<div class="lg:col-span-5 flex justify-center lg:justify-end">
-					<div class="relative w-full max-w-[380px] bg-gradient-to-b from-surface-container-lowest via-surface-container-lowest to-surface-container-low/40 p-3.5 rounded-3xl shadow-card-soft border border-outline-variant/50 hover:border-outline-variant/80 transition-all duration-500 group">
+					<div class="relative w-full max-w-[390px] pt-4 pb-2 px-2">
 						
-						<!-- Subtle Corner Crosshairs -->
-						<span class="absolute top-2.5 left-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
-						<span class="absolute top-2.5 right-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
-
-						<div class="relative aspect-square w-full overflow-hidden rounded-2xl bg-surface-container shadow-xs">
-							<picture>
-								<source type="image/webp" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/rashed-hossain-400.webp' ); ?> 400w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/rashed-hossain.webp' ); ?> 800w" sizes="(max-width: 640px) 320px, 384px">
-								<img src="<?php echo esc_url( stitch_get_hero_avatar() ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'stitch_brand_name', 'Rashed Hossain' ) ); ?>" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]" width="400" height="400" fetchpriority="high" loading="eager" decoding="async">
-							</picture>
-							<div class="absolute bottom-2.5 left-2.5 right-2.5 px-3 py-1.5 bg-on-surface/85 backdrop-blur-md rounded-xl text-surface font-label-code text-[10.5px] tracking-wide flex items-center justify-between border border-white/10 shadow-sm">
-								<span class="font-medium truncate"><?php echo esc_html( $photo_badge ); ?></span>
-								<span class="text-white/60 text-[9.5px] shrink-0 font-mono">UTC+6</span>
-							</div>
+						<!-- Floating Satellite Pill 1 (Top Left): WordPress Core Releases -->
+						<div class="absolute -top-1 -left-2 sm:-left-4 z-20 px-3.5 py-1.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/70 shadow-md flex items-center gap-2 font-label-code text-[11px] text-on-surface animate-fadeIn">
+							<svg class="w-3.5 h-3.5 text-[#0073aa]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0zm0 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11"/></svg>
+							<span class="font-semibold">Core Contributor</span>
+							<span class="text-outline text-[10px] font-mono">6.9 &bull; 7.0 &bull; 7.1</span>
 						</div>
 
-						<div class="flex items-center justify-between pt-3 px-1.5 font-label-code text-[11px]">
-							<span class="text-outline flex items-center gap-1.5">
-								<svg class="w-3.5 h-3.5 text-[#0073aa]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0zm0 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11"/></svg>
-								<span>WordPress Core Contributor</span>
+						<!-- Floating Satellite Pill 2 (Bottom Right): Live Dhaka Telemetry Beacon -->
+						<div class="absolute -bottom-2 -right-2 sm:-right-4 z-20 px-3.5 py-1.5 rounded-full bg-[#0a0e17] text-white border border-white/20 shadow-xl flex items-center gap-2 font-label-code text-[11px] animate-fadeIn">
+							<span class="flex h-1.5 w-1.5 relative">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
 							</span>
-							<span class="text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
-								<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-								Active
-							</span>
+							<span class="font-medium text-white/90">Dhaka, BD</span>
+							<span class="text-white/30">&bull;</span>
+							<span class="text-emerald-400 font-mono text-[10px]">UTC+6</span>
+						</div>
+
+						<!-- Main Glassmorphism Portrait Frame -->
+						<div class="relative bg-gradient-to-b from-surface-container-lowest via-surface-container-lowest to-surface-container-low/40 p-3.5 sm:p-4 rounded-3xl shadow-card-soft border border-outline-variant/60 hover:border-outline-variant/90 transition-all duration-500 group">
+							
+							<!-- Corner Crosshairs -->
+							<span class="absolute top-2.5 left-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
+							<span class="absolute top-2.5 right-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
+							<span class="absolute bottom-2.5 left-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
+							<span class="absolute bottom-2.5 right-2.5 font-mono text-[10px] text-outline-variant/50 pointer-events-none select-none">+</span>
+
+							<div class="relative aspect-square w-full overflow-hidden rounded-2xl bg-surface-container shadow-xs">
+								<picture>
+									<source type="image/webp" srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/rashed-hossain-400.webp' ); ?> 400w, <?php echo esc_url( get_template_directory_uri() . '/assets/images/rashed-hossain.webp' ); ?> 800w" sizes="(max-width: 640px) 320px, 384px">
+									<img src="<?php echo esc_url( stitch_get_hero_avatar() ); ?>" alt="<?php echo esc_attr( get_theme_mod( 'stitch_brand_name', 'Rashed Hossain' ) ); ?>" class="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]" width="400" height="400" fetchpriority="high" loading="eager" decoding="async">
+								</picture>
+								<div class="absolute bottom-2.5 left-2.5 right-2.5 px-3 py-1.5 bg-on-surface/85 backdrop-blur-md rounded-xl text-surface font-label-code text-[10.5px] tracking-wide flex items-center justify-between border border-white/10 shadow-sm">
+									<span class="font-medium truncate"><?php echo esc_html( $photo_badge ); ?></span>
+									<span class="text-emerald-400 text-[10px] font-semibold flex items-center gap-1">
+										<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verified
+									</span>
+								</div>
+							</div>
+
+							<div class="flex items-center justify-between pt-3 px-1.5 font-label-code text-[11px]">
+								<span class="text-outline flex items-center gap-1.5">
+									<span>Profiles: profiles.wordpress.org/wprashed</span>
+								</span>
+								<span class="text-emerald-700 dark:text-emerald-400 font-semibold flex items-center gap-1.5">
+									<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+									Active
+								</span>
+							</div>
+
 						</div>
 
 					</div>
