@@ -476,84 +476,108 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		</section>
 
 		<!-- =================================================================
-		     SECTION 4: SIGNATURE OPEN-SOURCE REPOSITORIES (FLAGSHIP + DECK)
+		     SECTION 4: SIGNATURE OPEN-SOURCE REPOSITORIES (DEEP TERMINAL DEV LAB)
 		     ================================================================= -->
-		<section class="px-6 md:px-12 lg:px-16 py-16 md:py-20 lg:py-24 bg-[#f1f5f9] dark:bg-[#0c121e] border-b border-surface-container-high/60">
-			<div class="max-w-6xl mx-auto flex flex-col gap-10">
+		<section class="relative px-6 md:px-12 lg:px-16 py-18 md:py-24 lg:py-28 bg-[#080d1a] text-white border-y border-white/10 overflow-hidden">
+			<!-- Atmospheric Developer Lab Glows -->
+			<div class="pointer-events-none absolute -top-40 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl opacity-50"></div>
+			<div class="pointer-events-none absolute -bottom-40 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl opacity-40"></div>
+
+			<!-- Subtle Terminal Grid Lines -->
+			<div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+
+			<div class="max-w-6xl mx-auto flex flex-col gap-12 relative z-10">
 				
-				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+				<!-- Section Masthead with Git Status -->
+				<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-2 border-b border-white/10">
 					<div>
-						<div class="inline-flex items-center gap-2 font-mono text-[11px] tracking-wider uppercase text-outline mb-1.5">
-							<span class="w-1.5 h-1.5 bg-[#0073aa] rounded-full"></span>
-							<span>Featured Code Repositories &bull; Open Source</span>
+						<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 text-white font-mono text-[11px] uppercase tracking-wider border border-white/15 mb-3">
+							<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+							<span>Upstream Repositories &bull; Git &amp; SVN</span>
 						</div>
-						<h2 class="font-display text-2xl sm:text-3xl lg:text-4xl text-on-surface font-normal">
-							Projects &amp; Upstream Repositories I Build
+						<h2 class="font-display text-3xl sm:text-4xl lg:text-[42px] text-white font-normal tracking-tight leading-tight">
+							Projects &amp; Open-Source Repositories I Build
 						</h2>
+						<p class="font-body text-[14.5px] text-white/70 mt-2 max-w-2xl font-light leading-relaxed">
+							Contributing patches, performance frameworks, and tooling upstream to software powering over 43% of the internet.
+						</p>
 					</div>
-					<div class="flex items-center gap-3">
-						<span class="font-mono text-[11px] text-on-surface-variant hidden sm:inline">
-							Powering Millions of Websites
-						</span>
-						<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="font-mono text-[11.5px] text-primary-container hover:text-primary inline-flex items-center gap-1.5 transition-colors pb-1">
+
+					<div class="flex items-center gap-3 shrink-0">
+						<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-slate-900 hover:bg-white/90 font-mono text-[12px] font-semibold transition-all shadow-md group">
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
 							<span>github.com/wprashed</span>
-							<span class="material-symbols-outlined text-[14px]">north_east</span>
+							<span class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
 						</a>
 					</div>
 				</div>
 
-				<!-- Dual-Hero Flagship Showcases (2 Large Architected Cards) -->
+				<!-- Dual-Hero Flagship Showcases (High-Contrast Glassmorphic Terminals) -->
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					
 					<!-- Flagship 1: WordPress Core -->
-					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-8 sm:p-9 rounded-3xl border border-outline-variant/50 hover:border-[#0073aa]/60 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-sm flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[4px] bg-[#0073aa]"></div>
+					<a href="https://github.com/WordPress/wordpress-develop" target="_blank" rel="noopener noreferrer" class="group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-[#38bdf8]/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden">
+						<!-- Ambient Corner Glow -->
+						<div class="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
+						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#0073aa] via-[#38bdf8] to-transparent"></div>
+
 						<div>
-							<div class="flex items-center justify-between mb-4">
-								<span class="font-mono text-[11px] text-[#0073aa] uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-[#0073aa]/10">01 // CORE ARCHITECTURE</span>
-								<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+							<!-- Terminal Window Bar -->
+							<div class="flex items-center justify-between mb-5">
+								<div class="flex items-center gap-2">
+									<div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+									<div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+									<div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+									<span class="font-mono text-[11px] text-[#38bdf8] uppercase font-bold tracking-wider ml-2 px-2.5 py-0.5 rounded-md bg-[#38bdf8]/10 border border-[#38bdf8]/20">01 // CORE ARCHITECTURE</span>
+								</div>
+								<span class="font-mono text-[11px] text-white/50 flex items-center gap-1.5">
 									<span class="material-symbols-outlined text-[14px]">fork_right</span>
 									<span>trunk</span>
 								</span>
 							</div>
 
-							<h3 class="font-display text-2xl sm:text-3xl text-on-surface font-normal mb-3 group-hover:text-primary-container transition-colors">
-								WordPress Core
-							</h3>
+							<div class="flex items-center justify-between mb-3">
+								<h3 class="font-display text-2xl sm:text-3xl text-white font-normal group-hover:text-[#38bdf8] transition-colors">
+									WordPress Core
+								</h3>
+								<div class="w-8 h-8 rounded-full bg-[#0073aa]/20 border border-[#0073aa]/40 text-[#38bdf8] flex items-center justify-center shrink-0">
+									<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0zm0 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11"/></svg>
+								</div>
+							</div>
 
 							<div class="flex flex-wrap items-center gap-2 mb-4 font-mono text-[11px]">
-								<span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-400 font-semibold border border-blue-500/20">
+								<span class="px-3 py-1 rounded-full bg-blue-500/20 text-[#60a5fa] font-semibold border border-blue-500/30">
 									30+ PRs Merged
 								</span>
-								<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium border border-outline-variant/40">
+								<span class="px-3 py-1 rounded-full bg-white/10 text-white/90 font-medium border border-white/15">
 									Credited in 6.9, 7.0 &amp; 7.1
 								</span>
 							</div>
 
-							<p class="font-body text-[13.5px] text-on-surface-variant leading-relaxed mb-5">
+							<p class="font-body text-[14px] text-white/70 leading-relaxed mb-6 font-light">
 								Upstream contributions to WordPress Core powering over 43% of all global websites. Authoring patches for block editor components, media routers, internationalization, and platform stability.
 							</p>
 
 							<!-- Key Architectural Impact Points -->
-							<div class="space-y-1.5 pt-2 border-t border-surface-container-high/60 font-body text-[12.5px] text-on-surface-variant">
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+							<div class="space-y-2.5 pt-4 border-t border-white/10 font-body text-[13px] text-white/80">
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>Editor &amp; DataViews focus containment popover fixes</span>
 								</div>
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>REST API &amp; media query route resilience under load</span>
 								</div>
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-[#0073aa]">check_circle</span>
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>Polyglots translation infrastructure and string indexing</span>
 								</div>
 							</div>
 						</div>
 
-						<div class="pt-5 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[11.5px] text-outline">
-							<span>WordPress/wordpress-develop</span>
-							<span class="text-on-surface group-hover:text-primary-container font-semibold inline-flex items-center gap-1">
+						<div class="pt-5 mt-6 border-t border-white/10 flex items-center justify-between font-mono text-[11.5px] text-white/50">
+							<span class="text-white/60">WordPress/wordpress-develop</span>
+							<span class="text-white group-hover:text-[#38bdf8] font-semibold inline-flex items-center gap-1">
 								<span>Inspect Code</span>
 								<span class="material-symbols-outlined text-[14px]">north_east</span>
 							</span>
@@ -561,54 +585,68 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 					</a>
 
 					<!-- Flagship 2: Performance Suite -->
-					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="group relative bg-surface-container-lowest p-8 sm:p-9 rounded-3xl border border-outline-variant/50 hover:border-emerald-500/60 hover:-translate-y-1.5 hover:shadow-card-soft transition-all duration-300 shadow-sm flex flex-col justify-between overflow-hidden">
-						<div class="absolute top-0 left-0 right-0 h-[4px] bg-emerald-500"></div>
+					<a href="https://github.com/WordPress/performance" target="_blank" rel="noopener noreferrer" class="group relative bg-white/[0.04] p-8 sm:p-9 rounded-3xl border border-white/10 hover:border-emerald-400/60 hover:bg-white/[0.06] transition-all duration-300 shadow-xl flex flex-col justify-between overflow-hidden">
+						<!-- Ambient Corner Glow -->
+						<div class="pointer-events-none absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-2xl opacity-40 group-hover:opacity-70 transition-opacity"></div>
+						<div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-500 via-teal-400 to-transparent"></div>
+
 						<div>
-							<div class="flex items-center justify-between mb-4">
-								<span class="font-mono text-[11px] text-emerald-700 dark:text-emerald-400 uppercase font-bold tracking-wider px-2.5 py-1 rounded-md bg-emerald-500/10">02 // PERFORMANCE LAB</span>
-								<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+							<!-- Terminal Window Bar -->
+							<div class="flex items-center justify-between mb-5">
+								<div class="flex items-center gap-2">
+									<div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+									<div class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></div>
+									<div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+									<span class="font-mono text-[11px] text-emerald-400 uppercase font-bold tracking-wider ml-2 px-2.5 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20">02 // PERFORMANCE LAB</span>
+								</div>
+								<span class="font-mono text-[11px] text-white/50 flex items-center gap-1.5">
 									<span class="material-symbols-outlined text-[14px]">fork_right</span>
 									<span>trunk</span>
 								</span>
 							</div>
 
-							<h3 class="font-display text-2xl sm:text-3xl text-on-surface font-normal mb-3 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
-								Performance Suite
-							</h3>
+							<div class="flex items-center justify-between mb-3">
+								<h3 class="font-display text-2xl sm:text-3xl text-white font-normal group-hover:text-emerald-400 transition-colors">
+									Performance Suite
+								</h3>
+								<div class="w-8 h-8 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined text-[18px]">speed</span>
+								</div>
+							</div>
 
 							<div class="flex flex-wrap items-center gap-2 mb-4 font-mono text-[11px]">
-								<span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-semibold border border-emerald-500/20">
+								<span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold border border-emerald-500/30">
 									Optimization Detective &amp; Core Vitals
 								</span>
-								<span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium border border-outline-variant/40">
+								<span class="px-3 py-1 rounded-full bg-white/10 text-white/90 font-medium border border-white/15">
 									8 PRs Authored
 								</span>
 							</div>
 
-							<p class="font-body text-[13.5px] text-on-surface-variant leading-relaxed mb-5">
+							<p class="font-body text-[14px] text-white/70 leading-relaxed mb-6 font-light">
 								Official performance testbed created by the WordPress Performance Team. Authored pull requests improving Optimization Detective tag metrics validation, mismatched ETag cache transients, and View Transitions UI filter hooks.
 							</p>
 
 							<!-- Key Architectural Impact Points -->
-							<div class="space-y-1.5 pt-2 border-t border-surface-container-high/60 font-body text-[12.5px] text-on-surface-variant">
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+							<div class="space-y-2.5 pt-4 border-t border-white/10 font-body text-[13px] text-white/80">
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>Optimization Detective tag metrics validation pipeline</span>
 								</div>
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>ETag header transient cache invalidation fixes</span>
 								</div>
-								<div class="flex items-center gap-2">
-									<span class="material-symbols-outlined text-[15px] text-emerald-600">check_circle</span>
+								<div class="flex items-center gap-2.5">
+									<span class="material-symbols-outlined text-[16px] text-emerald-400 shrink-0">check_circle</span>
 									<span>View Transitions UI filter hooks and client navigation</span>
 								</div>
 							</div>
 						</div>
 
-						<div class="pt-5 mt-6 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[11.5px] text-outline">
-							<span>WordPress/performance</span>
-							<span class="text-on-surface group-hover:text-emerald-700 dark:group-hover:text-emerald-400 font-semibold inline-flex items-center gap-1">
+						<div class="pt-5 mt-6 border-t border-white/10 flex items-center justify-between font-mono text-[11.5px] text-white/50">
+							<span class="text-white/60">WordPress/performance</span>
+							<span class="text-white group-hover:text-emerald-400 font-semibold inline-flex items-center gap-1">
 								<span>Inspect Code</span>
 								<span class="material-symbols-outlined text-[14px]">north_east</span>
 							</span>
@@ -617,107 +655,107 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 
 				</div>
 
-				<!-- Secondary Deck (4 Compact Cards) -->
+				<!-- Secondary Deck (4 Distinct Chromatic Cards in Bento Grid) -->
 				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
 					
-					<!-- Deck Card 1: Gutenberg & DataViews -->
-					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-purple-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
+					<!-- Deck Card 1: Gutenberg & DataViews (Purple Accent) -->
+					<a href="https://github.com/WordPress/gutenberg" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-purple-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3">
-								<span class="font-mono text-[10px] text-purple-700 dark:text-purple-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-purple-500/10">BLOCK EDITOR</span>
-								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-purple-600 transition-colors">north_east</span>
+							<div class="flex items-center justify-between mb-3.5">
+								<span class="font-mono text-[10px] text-purple-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30">BLOCK EDITOR</span>
+								<span class="material-symbols-outlined text-[15px] text-white/40 group-hover:text-purple-300 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-purple-600 transition-colors">
+							<h3 class="font-display text-lg text-white font-medium mb-2 group-hover:text-purple-300 transition-colors">
 								Gutenberg &amp; DataViews
 							</h3>
-							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+							<p class="font-body text-[12.5px] text-white/70 leading-relaxed font-light">
 								Authored fixes for dialog focus popover containment and Field.sort TypeScript type definitions in WordPress's core UI engine.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
-							<span>WordPress/gutenberg</span>
-							<span class="text-on-surface font-medium">Merged ↗</span>
+						<div class="pt-3.5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-white/50">
+							<span class="truncate">WordPress/gutenberg</span>
+							<span class="text-purple-300 font-semibold shrink-0">Merged ↗</span>
 						</div>
 					</a>
 
-					<!-- Deck Card 2: WordPress AI & Playground -->
-					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-cyan-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
+					<!-- Deck Card 2: WordPress AI & Playground (Cyan Accent) -->
+					<a href="https://github.com/WordPress/ai" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-cyan-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3">
-								<span class="font-mono text-[10px] text-cyan-700 dark:text-cyan-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-cyan-500/10">AI &amp; WASM</span>
-								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-cyan-600 transition-colors">north_east</span>
+							<div class="flex items-center justify-between mb-3.5">
+								<span class="font-mono text-[10px] text-cyan-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/30">AI &amp; WASM</span>
+								<span class="material-symbols-outlined text-[15px] text-white/40 group-hover:text-cyan-300 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-cyan-600 transition-colors">
+							<h3 class="font-display text-lg text-white font-medium mb-2 group-hover:text-cyan-300 transition-colors">
 								AI &amp; Playground
 							</h3>
-							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+							<p class="font-body text-[12.5px] text-white/70 leading-relaxed font-light">
 								Integrated Content Translation guidelines for official WordPress AI, and Blueprints multisite REQUEST_URI scoping in WASM.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
-							<span>WordPress/ai · wasm</span>
-							<span class="text-on-surface font-medium">Merged ↗</span>
+						<div class="pt-3.5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-white/50">
+							<span class="truncate">WordPress/ai &bull; wasm</span>
+							<span class="text-cyan-300 font-semibold shrink-0">Merged ↗</span>
 						</div>
 					</a>
 
-					<!-- Deck Card 3: WP-CLI & Config Tools -->
-					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-amber-500/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
+					<!-- Deck Card 3: WP-CLI & Config Tools (Amber Accent) -->
+					<a href="https://github.com/wp-cli/wp-cli" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-amber-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3">
-								<span class="font-mono text-[10px] text-amber-700 dark:text-amber-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/10">CLI TOOLING</span>
-								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-amber-600 transition-colors">north_east</span>
+							<div class="flex items-center justify-between mb-3.5">
+								<span class="font-mono text-[10px] text-amber-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/30">CLI TOOLING</span>
+								<span class="material-symbols-outlined text-[15px] text-white/40 group-hover:text-amber-300 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-amber-600 transition-colors">
+							<h3 class="font-display text-lg text-white font-medium mb-2 group-hover:text-amber-300 transition-colors">
 								WP-CLI &amp; Config Tools
 							</h3>
-							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+							<p class="font-body text-[12.5px] text-white/70 leading-relaxed font-light">
 								Engineered atomic temporary file writing in wp-config-transformer to prevent corruptions, improved SSH binary parameters.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
-							<span>wp-cli/wp-cli</span>
-							<span class="text-on-surface font-medium">Upstream ↗</span>
+						<div class="pt-3.5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-white/50">
+							<span class="truncate">wp-cli/wp-cli</span>
+							<span class="text-amber-300 font-semibold shrink-0">Upstream ↗</span>
 						</div>
 					</a>
 
-					<!-- Deck Card 4: Tutor LMS Platform -->
-					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="group bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 hover:border-blue-600/50 hover:-translate-y-1 hover:shadow-card-soft transition-all duration-300 shadow-2xs flex flex-col justify-between">
+					<!-- Deck Card 4: Tutor LMS Platform (Emerald Accent) -->
+					<a href="https://github.com/themeum/tutor" target="_blank" rel="noopener noreferrer" class="group bg-white/[0.03] hover:bg-white/[0.06] p-6 rounded-2xl border border-white/10 hover:border-emerald-400/50 hover:-translate-y-1 transition-all duration-300 shadow-lg flex flex-col justify-between">
 						<div>
-							<div class="flex items-center justify-between mb-3">
-								<span class="font-mono text-[10px] text-blue-700 dark:text-blue-400 font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-blue-600/10">LMS #1</span>
-								<span class="material-symbols-outlined text-[15px] text-outline group-hover:text-blue-600 transition-colors">north_east</span>
+							<div class="flex items-center justify-between mb-3.5">
+								<span class="font-mono text-[10px] text-emerald-300 font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/30">100K+ SITES</span>
+								<span class="material-symbols-outlined text-[15px] text-white/40 group-hover:text-emerald-300 transition-colors">north_east</span>
 							</div>
-							<h3 class="font-display text-lg text-on-surface font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+							<h3 class="font-display text-lg text-white font-medium mb-2 group-hover:text-emerald-300 transition-colors">
 								Tutor LMS Platform
 							</h3>
-							<p class="font-body text-[12px] text-on-surface-variant leading-relaxed">
+							<p class="font-body text-[12.5px] text-white/70 leading-relaxed font-light">
 								Powering 100K+ educational sites. Leading tech support operations and contributing to core code, multisite and metadata security.
 							</p>
 						</div>
-						<div class="pt-3.5 mt-4 border-t border-surface-container-high/50 flex items-center justify-between font-mono text-[10.5px] text-outline">
-							<span>themeum/tutor</span>
-							<span class="text-on-surface font-medium">100K+ Sites ↗</span>
+						<div class="pt-3.5 mt-5 border-t border-white/10 flex items-center justify-between font-mono text-[11px] text-white/50">
+							<span class="truncate">themeum/tutor</span>
+							<span class="text-emerald-300 font-semibold shrink-0">100K+ ↗</span>
 						</div>
 					</a>
 
 				</div>
 
-				<!-- Extra GitHub Repos Banner -->
-				<div class="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-on-surface-variant font-mono text-[12px]">
+				<!-- Extra GitHub Repos Console Bar -->
+				<div class="p-6 rounded-2xl bg-white/[0.04] border border-white/10 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-white/70 font-mono text-[12px]">
 					<div class="flex flex-wrap items-center gap-2.5">
-						<span class="text-on-surface font-semibold flex items-center gap-1.5">
-							<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+						<span class="text-white font-semibold flex items-center gap-2">
+							<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
 							<span>Also contributing to:</span>
 						</span>
-						<a href="https://github.com/woocommerce/woocommerce" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">woocommerce/woocommerce</a>
-						<span class="text-outline-variant">&bull;</span>
-						<a href="https://github.com/Automattic/jetpack" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">Automattic/jetpack</a>
-						<span class="text-outline-variant">&bull;</span>
-						<a href="https://github.com/WordPress/openverse" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">WordPress/openverse</a>
-						<span class="text-outline-variant">&bull;</span>
-						<a href="https://github.com/WordPress/wordcamp.org" target="_blank" rel="noopener noreferrer" class="hover:text-primary-container hover:underline underline-offset-2">WordPress/wordcamp.org</a>
+						<a href="https://github.com/woocommerce/woocommerce" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline underline-offset-2">woocommerce/woocommerce</a>
+						<span class="text-white/30">&bull;</span>
+						<a href="https://github.com/Automattic/jetpack" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline underline-offset-2">Automattic/jetpack</a>
+						<span class="text-white/30">&bull;</span>
+						<a href="https://github.com/WordPress/openverse" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline underline-offset-2">WordPress/openverse</a>
+						<span class="text-white/30">&bull;</span>
+						<a href="https://github.com/WordPress/wordcamp.org" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline underline-offset-2">WordPress/wordcamp.org</a>
 					</div>
-					<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-primary-container font-semibold hover:text-primary shrink-0 transition-colors">
+					<a href="https://github.com/wprashed" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-white font-semibold hover:text-[#38bdf8] shrink-0 transition-colors">
 						<span>View 130+ PRs on GitHub</span>
 						<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
 					</a>
