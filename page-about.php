@@ -575,7 +575,7 @@ $pexels_url    = get_theme_mod( 'stitch_pexels_url', 'https://www.pexels.com/@ra
 		</section>
 
 		<!-- SECTION 4: CURATED PHOTOGRAPHY (CINEMATIC BENTO EXHIBITION) -->
-		<section class="relative px-6 md:px-12 py-18 bg-[#090d16] text-white border-y border-white/10 overflow-hidden">
+		<section class="relative px-6 md:px-12 py-20 md:py-24 lg:py-28 bg-[#090d16] text-white border-y border-white/10 overflow-hidden">
 			<!-- Radial Ambience -->
 			<div class="pointer-events-none absolute top-0 left-1/3 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl opacity-40"></div>
 			<div class="pointer-events-none absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-3xl opacity-30"></div>

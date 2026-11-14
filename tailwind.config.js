@@ -18,6 +18,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			spacing: {
+				18: "4.5rem"
+			},
 			colors: {
 				"surface": withOpacity("--color-surface-rgb"),
 				"surface-dim": withOpacity("--color-surface-dim-rgb"),

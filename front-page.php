@@ -59,7 +59,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		<!-- =================================================================
 		     SECTION 1: HERO & ARCHITECTURAL IDENTITY (PRECISION EDITORIAL & TELEMETRY)
 		     ================================================================= -->
-		<section class="relative px-6 md:px-12 lg:px-16 pt-14 pb-18 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-surface-container-lowest overflow-hidden border-b border-surface-container-high/60">
+		<section class="relative px-6 md:px-12 lg:px-16 pt-14 pb-20 md:pt-20 md:pb-24 lg:pt-24 lg:pb-28 bg-surface-container-lowest overflow-hidden border-b border-surface-container-high/60">
 			<!-- Atmospheric Subtle Background Glows -->
 			<div class="pointer-events-none absolute -top-32 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-primary/10 via-indigo-500/5 to-transparent rounded-full blur-3xl opacity-70"></div>
 			<div class="pointer-events-none absolute top-1/2 -left-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl opacity-50"></div>
@@ -482,7 +482,7 @@ $cta_desc    = get_theme_mod( 'stitch_cta_desc', 'I’m always open to discussin
 		<!-- =================================================================
 		     SECTION 4: SIGNATURE OPEN-SOURCE REPOSITORIES (DEEP TERMINAL DEV LAB)
 		     ================================================================= -->
-		<section class="relative px-6 md:px-12 lg:px-16 py-18 md:py-24 lg:py-28 bg-[#080d1a] text-white border-y border-white/10 overflow-hidden">
+		<section class="relative px-6 md:px-12 lg:px-16 py-20 md:py-24 lg:py-28 bg-[#080d1a] text-white border-y border-white/10 overflow-hidden">
 			<!-- Atmospheric Developer Lab Glows -->
 			<div class="pointer-events-none absolute -top-40 left-1/3 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl opacity-50"></div>
 			<div class="pointer-events-none absolute -bottom-40 right-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl opacity-40"></div>
